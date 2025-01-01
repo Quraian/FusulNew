@@ -1,0 +1,17 @@
+{
+  "name": "Fusul2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "common": "pnpm --filter common"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "type": "module"
+}
