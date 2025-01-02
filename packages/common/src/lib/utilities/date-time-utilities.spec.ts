@@ -13,12 +13,12 @@ const SAMPLE_DATE_MARCH_11 = new Date('2023-03-11T21:00:00.000Z');
 const SAMPLE_DATE_JULY_27 = new Date('2023-07-27T21:00:00.000Z');
 
 beforeEach(() => {
-  jest.useFakeTimers();
-  jest.setSystemTime(new Date(SAMPLE_DATE_MARCH_11));
+  vi.useFakeTimers();
+  vi.setSystemTime(new Date(SAMPLE_DATE_MARCH_11));
 });
 
 afterAll(() => {
-  jest.useRealTimers();
+  vi.useRealTimers();
 });
 
 const OPTIONS = {
