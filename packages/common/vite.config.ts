@@ -1,10 +1,6 @@
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  test: {
-    globals: true, // Enables global test functions like `test`, `describe`, and `it`
-  },
   build: {
     lib: {
       //   entry: resolve(__dirname, "src/lib/main.js"),

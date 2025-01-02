@@ -27,7 +27,7 @@ export async function setupI18n(language = 'ar') {
         escapeValue: false, // react already safes from xss
       },
     });
-  i18n.services.formatter?.add('indian', (value, _lng, _options) => {
+  i18n.services.formatter?.add('indian', (value) => {
     if (typeof value === 'number' || typeof value === 'bigint') {
       return new Intl.NumberFormat('ar-SA').format(value);
     }
