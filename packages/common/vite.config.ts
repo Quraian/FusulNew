@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   build: {
@@ -7,7 +7,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'Common',
       // the proper extensions will be added
-      fileName: '@fusul/common',
+      fileName: 'fusul-common',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
@@ -21,5 +21,8 @@ export default defineConfig({
         },
       },
     },
+  },
+  test: {
+    globals: true, // Enables global test functions like `test`, `describe`, and `it`
   },
 });
