@@ -2,9 +2,3 @@
 
 /dist
 /coverage
-
-/.nx/cache
-/packages/mobile/android
-/packages/shared/src/lib/data
-
-/.nx/workspace-data
