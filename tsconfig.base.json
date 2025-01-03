@@ -22,7 +22,10 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "paths": {}
+    "paths": {
+      "@fusul/common": ["./packages/common/src/index.ts"]
+      // "@fusul/common": ["packages/common/src/index.ts"],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

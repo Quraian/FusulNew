@@ -1,0 +1,512 @@
+[
+  {
+    "name": "جدة",
+    "nameEn": "Jeddah",
+    "lat": 21.516939,
+    "lon": 39.21917
+  },
+  {
+    "name": "الرياض",
+    "nameEn": "Riyadh",
+    "lat": 24.687731,
+    "lon": 46.721851
+  },
+  {
+    "name": "الجبيل",
+    "nameEn": "Al Jubayl",
+    "lat": 27.011221,
+    "lon": 49.65826
+  },
+  {
+    "name": "الطائف",
+    "nameEn": "Taif",
+    "lat": 21.270281,
+    "lon": 40.415829
+  },
+  {
+    "name": "الدمام",
+    "nameEn": "Ad Dammam",
+    "lat": 26.43442,
+    "lon": 50.10326
+  },
+  {
+    "name": "تبوك",
+    "nameEn": "Tabuk",
+    "lat": 28.383329,
+    "lon": 36.583328
+  },
+  {
+    "name": "مكة المكرمة",
+    "nameEn": "Mecca",
+    "lat": 21.42667,
+    "lon": 39.826111
+  },
+  {
+    "name": "أبها",
+    "nameEn": "Abha",
+    "lat": 18.216391,
+    "lon": 42.50528
+  },
+  {
+    "name": "بريدة",
+    "nameEn": "Buraydah",
+    "lat": 26.325991,
+    "lon": 43.974972
+  },
+  {
+    "name": "بقيق",
+    "nameEn": "Abqaiq",
+    "lat": 25.937099,
+    "lon": 49.677608
+  },
+  {
+    "name": "القطيف",
+    "nameEn": "Al Qatif",
+    "lat": 26.5208,
+    "lon": 50.024521
+  },
+  {
+    "name": "الظهران",
+    "nameEn": "Dhahran",
+    "lat": 26.30324,
+    "lon": 50.135281
+  },
+  {
+    "name": "خميس مشيط",
+    "nameEn": "Khamis Mushayt",
+    "lat": 18.306391,
+    "lon": 42.729172
+  },
+  {
+    "name": "الرس",
+    "nameEn": "Ar Rass",
+    "lat": 25.86944,
+    "lon": 43.497299
+  },
+  {
+    "name": "المدينة المنورة",
+    "nameEn": "Medina",
+    "lat": 24.468611,
+    "lon": 39.61417
+  },
+  {
+    "name": "جيزان",
+    "nameEn": "Jizan",
+    "lat": 16.88917,
+    "lon": 42.551109
+  },
+  {
+    "name": "حائل",
+    "nameEn": "Hayil",
+    "lat": 27.521879,
+    "lon": 41.690731
+  },
+  {
+    "name": "الاوجام",
+    "nameEn": "Al Awjam",
+    "lat": 26.56324,
+    "lon": 49.94331
+  },
+  {
+    "name": "ينبع",
+    "nameEn": "Yanbu",
+    "lat": 24.089121,
+    "lon": 38.06374
+  },
+  {
+    "name": "الوجه",
+    "nameEn": "Al Wajh",
+    "lat": 26.24551,
+    "lon": 36.45248
+  },
+  {
+    "name": "طريف",
+    "nameEn": "Turayf",
+    "lat": 31.67252,
+    "lon": 38.663738
+  },
+  {
+    "name": "عرعر",
+    "nameEn": "Arar",
+    "lat": 30.975309,
+    "lon": 41.038078
+  },
+  {
+    "name": "القيصومة",
+    "nameEn": "Al Qaysumah",
+    "lat": 28.311171,
+    "lon": 46.127289
+  },
+  {
+    "name": "القريات",
+    "nameEn": "Al Qurayyat",
+    "lat": 31.33176,
+    "lon": 37.342819
+  },
+  {
+    "name": "الدوادمي",
+    "nameEn": "Ad Dawadimi",
+    "lat": 24.507721,
+    "lon": 44.392368
+  },
+  {
+    "name": "أملج",
+    "nameEn": "Umm Lajj",
+    "lat": 25.021259,
+    "lon": 37.268501
+  },
+  {
+    "name": "تربة",
+    "nameEn": "Turabah",
+    "lat": 21.21406,
+    "lon": 41.633099
+  },
+  {
+    "name": "تاروت",
+    "nameEn": "Tarut",
+    "lat": 26.57332,
+    "lon": 50.036942
+  },
+  {
+    "name": "طبرجل",
+    "nameEn": "Tubarjal",
+    "lat": 30.49987,
+    "lon": 38.21603
+  },
+  {
+    "name": "سلطانة",
+    "nameEn": "Sultanah",
+    "lat": 24.49258,
+    "lon": 39.58572
+  },
+  {
+    "name": "سيهات",
+    "nameEn": "Sayhat",
+    "lat": 26.48522,
+    "lon": 50.040459
+  },
+  {
+    "name": "صامطة",
+    "nameEn": "Samitah",
+    "lat": 16.59601,
+    "lon": 42.944351
+  },
+  {
+    "name": "سكاكا",
+    "nameEn": "Sakaka",
+    "lat": 29.96974,
+    "lon": 40.206409
+  },
+  {
+    "name": "صفوى",
+    "nameEn": "Safwa",
+    "lat": 26.64986,
+    "lon": 49.952229
+  },
+  {
+    "name": "صبيا",
+    "nameEn": "Sabya",
+    "lat": 17.1495,
+    "lon": 42.62537
+  },
+  {
+    "name": "رحيمة",
+    "nameEn": "Rahimah",
+    "lat": 26.707911,
+    "lon": 50.061939
+  },
+  {
+    "name": "رابغ",
+    "nameEn": "Rabigh",
+    "lat": 22.798559,
+    "lon": 39.034931
+  },
+  {
+    "name": "بيشة",
+    "nameEn": "Bisha",
+    "lat": 20.00054,
+    "lon": 42.605202
+  },
+  {
+    "name": "نجران",
+    "nameEn": "Najran",
+    "lat": 17.492399,
+    "lon": 44.127659
+  },
+  {
+    "name": "ضبا",
+    "nameEn": "Duba",
+    "lat": 27.351339,
+    "lon": 35.69014
+  },
+  {
+    "name": "بدر",
+    "nameEn": "Badr",
+    "lat": 23.782921,
+    "lon": 38.79047
+  },
+  {
+    "name": "الزلفي",
+    "nameEn": "Az Zulfi",
+    "lat": 26.29945,
+    "lon": 44.815418
+  },
+  {
+    "name": "الطرف",
+    "nameEn": "At Taraf",
+    "lat": 25.362761,
+    "lon": 49.72504
+  },
+  {
+    "name": "السليل",
+    "nameEn": "As Sulayyil",
+    "lat": 20.46067,
+    "lon": 45.577919
+  },
+  {
+    "name": "النماص",
+    "nameEn": "Al Namas",
+    "lat": 19.14547,
+    "lon": 42.120098
+  },
+  {
+    "name": "المنيزلة",
+    "nameEn": "Al Munayzilah",
+    "lat": 25.383329,
+    "lon": 49.666672
+  },
+  {
+    "name": "المبرز",
+    "nameEn": "Al Mubarraz",
+    "lat": 25.41,
+    "lon": 49.58083
+  },
+  {
+    "name": "الخبر",
+    "nameEn": "Al Khubar",
+    "lat": 26.27944,
+    "lon": 50.208328
+  },
+  {
+    "name": "الخفجي",
+    "nameEn": "Al Khafji",
+    "lat": 28.439051,
+    "lon": 48.491322
+  },
+  {
+    "name": "الجموم",
+    "nameEn": "Al Jumum",
+    "lat": 21.61694,
+    "lon": 39.698059
+  },
+  {
+    "name": "الهفوف",
+    "nameEn": "Al Hufuf",
+    "lat": 25.364571,
+    "lon": 49.565319
+  },
+  {
+    "name": "البكيرية",
+    "nameEn": "Al Bukayriyah",
+    "lat": 26.14422,
+    "lon": 43.659328
+  },
+  {
+    "name": "البطالية",
+    "nameEn": "Al Battaliyah",
+    "lat": 25.433331,
+    "lon": 49.633331
+  },
+  {
+    "name": "الباحة",
+    "nameEn": "Al Bahah",
+    "lat": 20.01288,
+    "lon": 41.46767
+  },
+  {
+    "name": "عفيف",
+    "nameEn": "Afif",
+    "lat": 23.9065,
+    "lon": 42.91724
+  },
+  {
+    "name": "الدلم",
+    "nameEn": "Ad Dilam",
+    "lat": 23.991461,
+    "lon": 47.162659
+  },
+  {
+    "name": "أبو عريش",
+    "nameEn": "Abu Arish",
+    "lat": 16.96887,
+    "lon": 42.832512
+  },
+  {
+    "name": "أم الساهك",
+    "nameEn": "Umm as Sahik",
+    "lat": 26.65361,
+    "lon": 49.916389
+  },
+  {
+    "name": "التوبي",
+    "nameEn": "At Tubi",
+    "lat": 26.557779,
+    "lon": 49.991669
+  },
+  {
+    "name": "تنومة",
+    "nameEn": "Tanumah",
+    "lat": 27.1,
+    "lon": 44.133331
+  },
+  {
+    "name": "تبالة",
+    "nameEn": "Tabalah",
+    "lat": 19.950001,
+    "lon": 42.400002
+  },
+  {
+    "name": "مليجة",
+    "nameEn": "Mulayjah",
+    "lat": 27.27103,
+    "lon": 48.424191
+  },
+  {
+    "name": "مسلية",
+    "nameEn": "Misliyah",
+    "lat": 17.459881,
+    "lon": 42.557201
+  },
+  {
+    "name": "مرات",
+    "nameEn": "Marat",
+    "lat": 25.07007,
+    "lon": 45.461472
+  },
+  {
+    "name": "جليجلة",
+    "nameEn": "Julayjilah",
+    "lat": 25.5,
+    "lon": 49.599998
+  },
+  {
+    "name": "فرسان",
+    "nameEn": "Farasan",
+    "lat": 16.702221,
+    "lon": 42.118328
+  },
+  {
+    "name": "ساجر",
+    "nameEn": "Sajir",
+    "lat": 25.18251,
+    "lon": 44.59964
+  },
+  {
+    "name": "السفانية",
+    "nameEn": "As Saffaniyah",
+    "lat": 27.970831,
+    "lon": 48.73
+  },
+  {
+    "name": "القرين",
+    "nameEn": "Al Qurayn",
+    "lat": 25.48333,
+    "lon": 49.599998
+  },
+  {
+    "name": "القارة",
+    "nameEn": "Al Qarah",
+    "lat": 25.41667,
+    "lon": 49.666672
+  },
+  {
+    "name": "المطيرفي",
+    "nameEn": "Al Mutayrifi",
+    "lat": 25.47879,
+    "lon": 49.557629
+  },
+  {
+    "name": "المندق",
+    "nameEn": "Al Mindak",
+    "lat": 20.1588,
+    "lon": 41.283371
+  },
+  {
+    "name": "المركز",
+    "nameEn": "Al Markaz",
+    "lat": 25.4,
+    "lon": 49.73333
+  },
+  {
+    "name": "الجبيل",
+    "nameEn": "Al Jubayl",
+    "lat": 25.4,
+    "lon": 49.650002
+  },
+  {
+    "name": "الجرادية",
+    "nameEn": "Al Jaradiyah",
+    "lat": 16.57946,
+    "lon": 42.912399
+  },
+  {
+    "name": "الجفر",
+    "nameEn": "Al Jafr",
+    "lat": 25.37694,
+    "lon": 49.72361
+  },
+  {
+    "name": "الارطاوية",
+    "nameEn": "Al Artawiyah",
+    "lat": 26.50526,
+    "lon": 45.344372
+  },
+  {
+    "name": "الدرب",
+    "nameEn": "Ad Darb",
+    "lat": 17.722851,
+    "lon": 42.252609
+  },
+  {
+    "name": "الصوير",
+    "nameEn": "Suwayr",
+    "lat": 30.11713,
+    "lon": 40.389252
+  },
+  {
+    "name": "تمير",
+    "nameEn": "Tumayr",
+    "lat": 25.70393,
+    "lon": 45.867962
+  },
+  {
+    "name": "الفويلق",
+    "nameEn": "Al Fuwayliq",
+    "lat": 26.44322,
+    "lon": 43.253399
+  },
+  {
+    "name": "المجاردة",
+    "nameEn": "Al Majaridah",
+    "lat": 19.12361,
+    "lon": 41.91111
+  },
+  {
+    "name": "المويه",
+    "nameEn": "Al Muwayh",
+    "lat": 22.433331,
+    "lon": 41.758289
+  },
+  {
+    "name": "الهدا",
+    "nameEn": "Al Hada",
+    "lat": 21.367531,
+    "lon": 40.286942
+  },
+  {
+    "name": "المزهرة",
+    "nameEn": "Mizhirah",
+    "lat": 16.826111,
+    "lon": 42.73333
+  }
+]

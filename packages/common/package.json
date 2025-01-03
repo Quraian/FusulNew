@@ -1,21 +1,16 @@
 {
   "name": "@fusul/common",
   "type": "module",
+  "main": "dist/fusul-common.js",
   "scripts": {
     "dev": "vite",
     "test": "vitest run",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "vite": "^6.0.6",
-    "vitest": "^2.1.8"
-  },
   "dependencies": {
     "@prisma/client": "6.1.0",
     "@umalqura/core": "^0.0.7",
-    "luxon": "^3.5.0",
-    "prisma": "^6.1.0",
     "zod": "^3.24.1"
   }
 }

@@ -6,6 +6,7 @@
     "lint": "pnpm eslint .",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\"",
     "common": "pnpm --filter common",
+    "data": "pnpm --filter data",
     "db": "pnpm --filter db"
   },
   "keywords": [],
