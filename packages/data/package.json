@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "main": "dist/fusul-data.js",
+  "types": "dist/fusul-data.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
