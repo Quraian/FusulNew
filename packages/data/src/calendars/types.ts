@@ -1,4 +1,4 @@
-import { Calendar, CalendarEvent, CalendarPeriod } from '@shared';
+import { Calendar, CalendarEvent, CalendarPeriod } from '@fusul/common';
 
 export type ProspectiveCalendar = Omit<
   Omit<Calendar, 'periods'> & {

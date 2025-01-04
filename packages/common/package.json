@@ -1,5 +1,6 @@
 {
   "name": "@fusul/common",
+  "private": true,
   "type": "module",
   "main": "dist/fusul-common.js",
   "scripts": {

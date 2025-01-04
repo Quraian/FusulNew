@@ -2,15 +2,25 @@
   "name": "@fusul/db",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "pnpm dlx prisma generate"
+    "generate:client": "pnpm dlx prisma generate",
+    "migrate:dev": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate dev",
+    "migrate:deploy": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate deploy",
+    "migrate:reset": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate reset",
+    "studio": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma studio",
+    "seed": "pnpm dlx prisma db seed",
+    "format": "pnpm dlx prisma format",
+    "lint": "pnpm dlx prisma format --check",
+    "start": "pnpm dlx supabase start",
+    "stop": "pnpm dlx supabase stop"
   },
   "license": "ISC",
   "dependencies": {
+    "@fusul/data": "workspace:*",
     "@prisma/client": "6.1.0",
     "prisma": "^6.1.0"
   },
   "prisma": {
-    "schema": "./prisma/schema.prisma"
+    "schema": "./prisma/schema.prisma",
+    "seed": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx tsx prisma/seed.ts"
   }
 }

@@ -23,8 +23,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@fusul/common": ["./packages/common/src/index.ts"]
-      // "@fusul/common": ["packages/common/src/index.ts"],
+      "@fusul/common": ["./packages/common/src/index.ts"],
+      "@fusul/data": ["./packages/data/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

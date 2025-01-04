@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { CalendarGroup, Color, Prisma } from '@prisma/client';
 
-import { DEFAULT_PREFERRED_CALENDARS_IDS } from '@shared';
+import { DEFAULT_PREFERRED_CALENDARS_IDS } from '@fusul/common';
 import { ProspectiveCalendar, ProspectivePeriod } from './types';
 import {
   seasonsCalendar,
