@@ -7,6 +7,7 @@
     "test": "vitest run",
     "lint": "pnpm eslint .",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\"",
+    "api": "pnpm --filter api",
     "common": "pnpm --filter common",
     "data": "pnpm --filter data",
     "db": "pnpm --filter db"
