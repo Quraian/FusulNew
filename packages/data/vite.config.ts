@@ -12,12 +12,11 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['react', '@prisma/client'],
+      external: ['@prisma/client'],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          react: 'React',
           '@prisma/client': 'Prisma Client',
         },
       },
