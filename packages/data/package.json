@@ -2,7 +2,8 @@
   "name": "@fusul/data",
   "private": true,
   "type": "module",
-  "main": "dist/fusul-data.js",
+  "module": "dist/fusul-data.js",
+  "main": "dist/fusul-data.umd.cjs",
   "types": "dist/fusul-data.d.ts",
   "scripts": {
     "dev": "vite",
@@ -10,6 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fusul/common": "workspace:*"
+    "@fusul/common": "workspace:*",
+    "@prisma/client": "catalog:",
+    "prisma": "catalog:"
   }
 }

@@ -7,17 +7,16 @@
     "migrate:deploy": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate deploy",
     "migrate:reset": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate reset",
     "studio": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma studio",
-    "seed": "pnpm dlx prisma db seed",
-    "format": "pnpm dlx prisma format",
-    "lint": "pnpm dlx prisma format --check",
+    "seed": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma db seed",
     "start": "pnpm dlx supabase start",
+    "status": "pnpm dlx supabase status",
     "stop": "pnpm dlx supabase stop"
   },
   "license": "ISC",
   "dependencies": {
     "@fusul/data": "workspace:*",
-    "@prisma/client": "6.1.0",
-    "prisma": "^6.1.0"
+    "@prisma/client": "catalog:",
+    "prisma": "catalog:"
   },
   "prisma": {
     "schema": "./prisma/schema.prisma",

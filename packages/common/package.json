@@ -2,7 +2,12 @@
   "name": "@fusul/common",
   "private": true,
   "type": "module",
-  "main": "dist/fusul-common.js",
+  "module": "dist/fusul-common.js",
+  "main": "dist/fusul-common.umd.cjs",
+  "types": "dist/fusul-common.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "test": "vitest run",
@@ -10,8 +15,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@prisma/client": "6.1.0",
+    "@prisma/client": "catalog:",
     "@umalqura/core": "^0.0.7",
+    "prisma": "catalog:",
     "zod": "^3.24.1"
   }
 }
