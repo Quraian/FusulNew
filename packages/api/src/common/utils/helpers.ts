@@ -7,5 +7,9 @@ export function buildWeatherUrl(cityName: string): string {
 }
 
 export function waitInSeconds(waitTime: number) {
-  return null;
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true);
+    }, waitTime * 1000);
+  });
 }

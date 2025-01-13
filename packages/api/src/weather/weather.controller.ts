@@ -3,7 +3,6 @@ import { Controller, Get, NotFoundException, Query } from '@nestjs/common';
 import { WeatherService } from './weather.service';
 import { GetWeatherQuery } from './get-weather-query';
 import { CitiesService } from '../cities/cities.service';
-import { Weather } from '@fusul/common';
 
 @Controller('weather')
 export class WeatherController {
@@ -13,7 +12,7 @@ export class WeatherController {
   ) {}
 
   @Get()
-  async getWeather(@Query() query: GetWeatherQuery): Promise<null> {
+  async getWeather(@Query() query: GetWeatherQuery) {
     const { cityName, lat, lon } = query;
 
     let name = cityName;

@@ -1,1 +1,2 @@
 - unplugin-swc, not needed if we cover tests using e2e
+  - also no need nock

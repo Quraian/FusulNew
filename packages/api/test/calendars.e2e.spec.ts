@@ -1,3 +1,4 @@
+import { vi } from 'vitest';
 import { Test, TestingModule } from '@nestjs/testing';
 import { HttpException, INestApplication } from '@nestjs/common';
 import request from 'supertest';
@@ -12,12 +13,12 @@ describe('Calendars (e2e)', () => {
   let moduleFixture: TestingModule;
 
   beforeAll(() => {
-    jest.useFakeTimers();
-    jest.setSystemTime(new Date('2022-12-04T10:52:57.532Z'));
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2022-12-04T10:52:57.532Z'));
   });
 
   afterAll(() => {
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
 
   beforeAll(async () => {

@@ -15,7 +15,7 @@ export class CalendarsController {
   }
 
   @Get('getCurrentPage')
-  getCurrentPage(@Query() query) {
+  getCurrentPage(@Query() query: GetEventsFilters) {
     return this.calendarsService.getCurrentPage(query);
   }
 

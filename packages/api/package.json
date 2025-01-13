@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build",
     "test": "vitest run",
-    "start": "nest start",
+    "start": "pnpm dlx dotenv-cli -e ../../.env -- nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main"
@@ -28,7 +28,8 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "ioredis": "^5.4.2",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.9",
@@ -37,6 +38,7 @@
     "@swc/cli": "^0.5.0",
     "@swc/core": "^1.10.7",
     "@types/express": "^5.0.0",
+    "nock": "^13.5.6",
     "supertest": "^7.0.0",
     "swc-loader": "^0.2.6",
     "ts-loader": "^9.5.2",

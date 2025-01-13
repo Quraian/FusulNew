@@ -68,36 +68,37 @@ describe('Weather (e2e)', () => {
       expect(response.body).toStrictEqual(expected);
     });
 
-    it('gets cached weather', (done) => {
-      request(app.getHttpServer())
-        .get(RIYADH_WEATHER_URL)
-        .then((response) => {
-          expect(response.status).toBe(200);
-          expect(response.body).toStrictEqual(expectedWeather);
-
+    it('gets cached weather', () =>
+      new Promise((done) => {
+        request(app.getHttpServer())
+          .get(RIYADH_WEATHER_URL)
           // eslint-disable-next-line sonarjs/no-nested-functions
-          setTimeout(() => {
-            nock.cleanAll();
-            nock('https://api.openweathermap.org')
-              .get('/data/2.5/weather')
-              .query((query) => !!query['q']?.toString().toLowerCase())
-              .reply(200, {
-                ...riyadhSampleWeather,
-                main: { ...riyadhSampleWeather.main, temp: 30 },
-              })
-              .persist();
+          .then((response) => {
+            expect(response.status).toBe(200);
+            expect(response.body).toStrictEqual(expectedWeather);
 
-            request(app.getHttpServer())
-              .get(RIYADH_WEATHER_URL)
-              .then((secondResponse) => {
-                expect(secondResponse.status).toBe(200);
-                expect(secondResponse.body).toStrictEqual(expectedWeather);
+            setTimeout(() => {
+              nock.cleanAll();
+              nock('https://api.openweathermap.org')
+                .get('/data/2.5/weather')
+                .query((query) => !!query['q']?.toString().toLowerCase())
+                .reply(200, {
+                  ...riyadhSampleWeather,
+                  main: { ...riyadhSampleWeather.main, temp: 30 },
+                })
+                .persist();
 
-                done();
-              });
-          }, 0); // increase the timeout and decrease the cache time value in RedisService to confirm it fails
-        });
-    });
+              request(app.getHttpServer())
+                .get(RIYADH_WEATHER_URL)
+                .then((secondResponse) => {
+                  expect(secondResponse.status).toBe(200);
+                  expect(secondResponse.body).toStrictEqual(expectedWeather);
+
+                  done(null);
+                });
+            }, 0); // increase the timeout and decrease the cache time value in RedisService to confirm it fails
+          });
+      }));
   });
 
   describe('Failure scenarios', () => {

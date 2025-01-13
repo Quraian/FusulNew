@@ -10,9 +10,7 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
-    // "module": "NodeNext",
-    // "moduleResolution": "NodeNext"
+    "noFallthroughCasesInSwitch": false
   },
   "files": [],
   "include": [],
@@ -25,25 +23,3 @@
     }
   ]
 }
-// {
-//   "extends": "./tsconfig.json",
-//   "compilerOptions": {
-//     "outDir": "../../dist/out-tsc",
-//     "module": "commonjs",
-//     "types": [
-//       "node",
-//       "@nx/react/typings/cssmodule.d.ts",
-//       "@nx/react/typings/image.d.ts"
-//     ],
-//     "emitDecoratorMetadata": true,
-//     "target": "es2021"
-//   },
-//   "exclude": [
-//     "jest.config.ts",
-//     "src/**/*.spec.ts",
-//     "src/**/*.test.ts"
-//   ],
-//   "include": [
-//     "src/**/*.ts"
-//   ]
-// }
