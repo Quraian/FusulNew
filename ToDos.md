@@ -1,0 +1,1 @@
+- unplugin-swc, not needed if we cover tests using e2e

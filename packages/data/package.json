@@ -7,8 +7,8 @@
   "types": "dist/fusul-data.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "test": "vitest run",
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "@fusul/common": "workspace:*",

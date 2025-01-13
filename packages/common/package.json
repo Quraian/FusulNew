@@ -11,8 +11,7 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest run",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "@prisma/client": "catalog:",
