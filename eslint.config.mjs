@@ -28,6 +28,7 @@ export default tseslint.config(
       'packages/mobile/android/**/*',
       'packages/mobile/ios/**/*',
       '/coverage/**/*',
+      'packages/api/webpack.config.js',
     ],
   },
   eslintConfigPrettier,

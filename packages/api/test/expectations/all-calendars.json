@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "group": "SeasonsAndAstronomy",
+    "title": "مواسم وفصول السنة",
+    "titleEn": "Seasons",
+    "description": "فصول السنة مع المواسم مثل الشبط، العقارب، المربعانية. إلخ..",
+    "descriptionEn": "The seasons of the year plus the agricultural/climatic local calendar",
+    "color": "DODGERBLUE",
+    "periods": [
+      { "id": 1, "title": "2023", "titleEn": "2023", "calendarId": 1 },
+      { "id": 2, "title": "2024", "titleEn": "2024", "calendarId": 1 },
+      { "id": 3, "title": "2025", "titleEn": "2025", "calendarId": 1 }
+    ]
+  },
+  {
+    "id": 2,
+    "group": "Religious",
+    "title": "التقويم الهجري",
+    "titleEn": "Hijri Calendar",
+    "description": "هو تقويم قمريّ، أي أنه يعتمد على دورة القمر لتحديد الأشهر، مكون من 12 شهرًا قمريًا في عام ذي 354 أو 355 يومًا. ويستخدمه المسلمون حاليًا خاصة في تحديد شهر رمضان، والأشهر الحُرُم، وأشهر الحج، والأعياد، وعدة الطلاق، وعدة الحامل، ودفع الزكاة.",
+    "descriptionEn": "is a lunar calendar consisting of 12 lunar months in a year of 354 or 355 days. It is used to determine the proper days of Islamic holidays and rituals, such as the annual fasting and the annual season for the great pilgrimage.",
+    "color": "PERU",
+    "periods": [
+      { "id": 4, "title": "1444", "titleEn": "1444", "calendarId": 2 },
+      { "id": 5, "title": "1445", "titleEn": "1445", "calendarId": 2 },
+      { "id": 6, "title": "1446", "titleEn": "1446", "calendarId": 2 }
+    ]
+  },
+  {
+    "id": 3,
+    "group": "Religious",
+    "title": "التقويم الإسلامي",
+    "titleEn": "Islamic Calendar",
+    "description": "اﻷيام المهمة في التقويم اﻹسلامي",
+    "descriptionEn": "Significant days in the Islamic calendar",
+    "color": "PERU",
+    "periods": [
+      { "id": 7, "title": "1444", "titleEn": "1444", "calendarId": 3 },
+      { "id": 8, "title": "1445", "titleEn": "1445", "calendarId": 3 },
+      { "id": 9, "title": "1446", "titleEn": "1446", "calendarId": 3 }
+    ]
+  },
+  {
+    "id": 4,
+    "group": "Education",
+    "title": "التقويم الدراسي",
+    "titleEn": "School Calendar",
+    "description": "التقويم الدراسي السعودي في التعليم العام",
+    "descriptionEn": "Saudi academic calendar in general education",
+    "color": "TEAL",
+    "periods": [
+      { "id": 10, "title": "1443", "titleEn": "1443", "calendarId": 4 },
+      { "id": 11, "title": "1444", "titleEn": "1444", "calendarId": 4 },
+      { "id": 12, "title": "1445", "titleEn": "1445", "calendarId": 4 },
+      {
+        "id": 13,
+        "title": "1447/1446",
+        "titleEn": "1447/1446",
+        "calendarId": 4
+      },
+      {
+        "id": 14,
+        "title": "1446/1447",
+        "titleEn": "1446/1447",
+        "calendarId": 4
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "group": "SalariesAndBenefits",
+    "title": "الرواتب الحكومية",
+    "titleEn": "Government Salaries",
+    "description": "​موعد صرف الرواتب",
+    "descriptionEn": "Salary payment dates",
+    "color": "DARKVIOLET",
+    "periods": [
+      { "id": 15, "title": "2023", "titleEn": "2023", "calendarId": 5 },
+      { "id": 16, "title": "2024", "titleEn": "2024", "calendarId": 5 }
+    ]
+  },
+  {
+    "id": 6,
+    "group": "SalariesAndBenefits",
+    "title": "معاشات التقاعد والتأمينات",
+    "titleEn": "Pensions",
+    "description": "​موعد صرف معاشات التقاعد المدني والعسكري والتأمينات الإجتماعية",
+    "descriptionEn": "Pensions",
+    "color": "DARKVIOLET",
+    "periods": [
+      { "id": 17, "title": "2023", "titleEn": "2023", "calendarId": 6 },
+      { "id": 18, "title": "2024", "titleEn": "2024", "calendarId": 6 },
+      { "id": 19, "title": "2025", "titleEn": "2025", "calendarId": 6 }
+    ]
+  }
+]

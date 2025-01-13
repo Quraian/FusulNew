@@ -1,0 +1,14 @@
+# https://fusul.herokuapp.com
+
+@base = http://localhost:3000
+
+### Get given city current weather
+# riyadh, tabuk, makkah, at taif
+GET {{base}}/api/weather?cityName=riyadh
+
+### Get given coords current weather
+GET {{base}}/api/weather?lat=24.69999996&lon=46.73333003
+
+### Get given coords current weather
+GET {{base}}/api/weather?lat=24.792708&lon=43.536661
+

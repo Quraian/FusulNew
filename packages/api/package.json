@@ -14,9 +14,21 @@
     "start:prod": "node dist/main"
   },
   "dependencies": {
+    "@fusul/common": "workspace:*",
+    "@nestjs/axios": "^3.1.3",
     "@nestjs/common": "^10.4.15",
     "@nestjs/core": "^10.4.15",
-    "@nestjs/platform-express": "^10.4.15"
+    "@nestjs/microservices": "^10.4.15",
+    "@nestjs/platform-express": "^10.4.15",
+    "@nestjs/serve-static": "^4.0.2",
+    "@nestjs/terminus": "^10.2.3",
+    "@nodeteam/nestjs-prisma-pagination": "^1.0.6",
+    "@prisma/client": "catalog:",
+    "axios": "^1.7.9",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "ioredis": "^5.4.2",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.9",
@@ -27,6 +39,7 @@
     "@types/express": "^5.0.0",
     "supertest": "^7.0.0",
     "swc-loader": "^0.2.6",
+    "ts-loader": "^9.5.2",
     "unplugin-swc": "^1.5.1"
   }
 }
