@@ -1,0 +1,22 @@
+# https://fusul.herokuapp.com
+
+@base = http://localhost:3000
+
+### Get all calendars
+GET {{base}}/api/calendars
+
+### Get all events
+GET {{base}}/api/calendars/events
+
+
+### Get all events for a given year
+GET {{base}}/api/calendars/events?year=2022
+
+
+### Get a given calendar events
+GET {{base}}/api/calendars/1/events
+
+
+### Get events of a given calendar from a given year
+GET {{base}}/api/calendars/1/events?year=2023
+

@@ -1,0 +1,31 @@
+{
+  "coord": { "lon": 46.7219, "lat": 24.6877 },
+  "weather": [
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 40.29,
+    "feels_like": 36.94,
+    "temp_min": 40.29,
+    "temp_max": 40.29,
+    "pressure": 1002,
+    "humidity": 8,
+    "sea_level": 1002,
+    "grnd_level": 938
+  },
+  "visibility": 10000,
+  "wind": { "speed": 8.77, "deg": 25, "gust": 8.67 },
+  "clouds": { "all": 99 },
+  "dt": 1657620090,
+  "sys": { "country": "SA", "sunrise": 1657591900, "sunset": 1657640719 },
+  "timezone": 10800,
+  "id": 108410,
+  "name": "Riyadh",
+  "cod": 200
+}

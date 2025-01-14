@@ -1,0 +1,14 @@
+# https://fusul.herokuapp.com
+
+@base = http://localhost:3000
+
+### Get city from name
+# riyadh, tabuk, makkah, at taif
+GET {{base}}/api/cities?cityName=riyadh
+
+### Get city from coords
+GET {{base}}/api/cities?lat=24.69999996&lon=46.73333003
+
+### Get city from coords
+GET {{base}}/api/cities?lat=24.792708&lon=43.536661
+

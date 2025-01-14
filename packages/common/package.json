@@ -5,14 +5,19 @@
   "module": "dist/fusul-common.js",
   "main": "dist/fusul-common.umd.cjs",
   "types": "dist/fusul-common.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./dist/fusul-common.umd.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "vite",
     "test": "vitest run",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "@prisma/client": "catalog:",

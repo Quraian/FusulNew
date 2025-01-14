@@ -2,6 +2,8 @@ import { Prisma, PrismaClient } from '@prisma/client';
 
 import { getCities, generateCalendars } from '@fusul/data';
 
+process.env.TZ = 'Asia/Riyadh';
+
 const prismaClient = new PrismaClient();
 
 async function seeder(

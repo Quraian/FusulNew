@@ -4,11 +4,16 @@
   "type": "module",
   "module": "dist/fusul-data.js",
   "main": "dist/fusul-data.umd.cjs",
-  "types": "dist/fusul-data.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./dist/fusul-data.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "test": "vitest run",
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "@fusul/common": "workspace:*",

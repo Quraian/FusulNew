@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 53,
+      "title": "جُمَادَى الأُولى",
+      "titleEn": "Jumada al-Awwal",
+      "description": "كانت تسمى قبل الإسلام باسم جمادى خمسة، وسميت جمادى لوقوعها في الشتاء وقت التسمية حيث جمد الماء وهي مؤنثة النطق.",
+      "descriptionEn": null,
+      "start": "2022-11-24T21:00:00.000Z",
+      "end": null,
+      "periodId": 4
+    },
+    {
+      "id": 133,
+      "title": "بداية الدراسة للطلاب للفصل الدراسي الثاني",
+      "titleEn": "Beginning of the second semester",
+      "description": null,
+      "descriptionEn": null,
+      "start": "2022-12-03T21:00:00.000Z",
+      "end": null,
+      "periodId": 11
+    },
+    {
+      "id": 134,
+      "title": "إجازة نهاية أسبوع مطولة",
+      "titleEn": "Long weekend holiday",
+      "description": null,
+      "descriptionEn": null,
+      "start": "2022-12-17T21:00:00.000Z",
+      "end": null,
+      "periodId": 11
+    },
+    {
+      "id": 54,
+      "title": "جُمَادَى الآخِرَة",
+      "titleEn": "Jumada al-Akhirah",
+      "description": "سمي بذلك لأنه تبع الشهر المسمى بجمادى الأولى.",
+      "descriptionEn": null,
+      "start": "2022-12-25T00:00:00.000Z",
+      "end": null,
+      "periodId": 4
+    },
+    {
+      "id": 135,
+      "title": "إجازة نهاية أسبوع مطولة",
+      "titleEn": "Long weekend holiday",
+      "description": null,
+      "descriptionEn": null,
+      "start": "2023-01-14T21:00:00.000Z",
+      "end": null,
+      "periodId": 11
+    }
+  ],
+  "meta": {
+    "total": 229,
+    "lastPage": 46,
+    "currentPage": 7,
+    "perPage": 5,
+    "prev": 6,
+    "next": 8
+  }
+}
