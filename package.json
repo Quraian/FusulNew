@@ -9,6 +9,7 @@
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\"",
     "api": "pnpm --filter api",
     "common": "pnpm --filter common",
+    "mobile": "pnpm --filter mobile",
     "data": "pnpm --filter data",
     "db": "pnpm --filter db"
   },
@@ -22,7 +23,6 @@
   "dependencies": {
     "i18next": "^24.2.0",
     "luxon": "^3.5.0",
-    "react": "^18.3.1",
     "react-i18next": "^15.4.0"
   },
   "devDependencies": {
@@ -36,11 +36,13 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
     "eslint-plugin-sonarjs": "^3.0.1",
+    "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "tslib": "^2.8.1",
-    "typescript": "~5.6.3",
-    "typescript-eslint": "^8.19.0",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
     "vite": "^5.1.8",
     "vitest": "^2.1.8"
   }
