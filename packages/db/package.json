@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "generate:client": "pnpm dlx prisma generate",
+    "migrate:testEnv": "pnpm dlx dotenv-cli -e ../../.env.test pnpm dlx prisma migrate dev",
     "migrate:dev": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate dev",
-    "migrate:deploy": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate deploy",
-    "migrate:reset": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate reset",
+    "deploy": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate deploy",
+    "reset:testEnv": "pnpm dlx dotenv-cli -e ../../.env.test pnpm dlx prisma migrate reset",
+    "reset": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma migrate reset",
     "studio": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma studio",
     "seed": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx prisma db seed",
+    "seed:testEnv": "pnpm dlx dotenv-cli -e ../../.env.test pnpm dlx prisma db seed",
     "start": "pnpm dlx supabase start",
     "status": "pnpm dlx supabase status",
     "stop": "pnpm dlx supabase stop"
@@ -20,6 +23,6 @@
   },
   "prisma": {
     "schema": "./prisma/schema.prisma",
-    "seed": "pnpm dlx dotenv-cli -e ../../.env pnpm dlx tsx prisma/seed.ts"
+    "seed": "pnpm dlx tsx prisma/seed.ts"
   }
 }

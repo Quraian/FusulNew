@@ -152,7 +152,7 @@ const periods: ProspectivePeriod[] = [
 export const govSalariesCalendar: ProspectiveCalendar = {
   title: 'الرواتب الحكومية',
   titleEn: 'Government Salaries',
-  description: '​موعد صرف الرواتب',
+  description: 'موعد صرف الرواتب',
   descriptionEn: 'Salary payment dates',
   group: CalendarGroup.SalariesAndBenefits,
   color: CalendarGroupColors[CalendarGroup.SalariesAndBenefits],

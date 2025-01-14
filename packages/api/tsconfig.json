@@ -6,6 +6,9 @@
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
     "sourceMap": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "outDir": "./dist",
     "noImplicitAny": false,
     "strictBindCallApply": false,
@@ -15,9 +18,6 @@
   "files": [],
   "include": [],
   "references": [
-    {
-      "path": "./tsconfig.build.json"
-    },
     {
       "path": "./tsconfig.spec.json"
     }
