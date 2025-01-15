@@ -1,0 +1,60 @@
+// {
+//   "extends": "./tsconfig.json",
+//   "compilerOptions": {
+//     "outDir": "../../dist/out-tsc",
+//     "module": "commonjs",
+//     "types": [
+//       "jest",
+//       "node",
+//       "@testing-library/jest-dom",
+//       "@nx/react/typings/cssmodule.d.ts",
+//       "@nx/react/typings/image.d.ts"
+//     ]
+//   },
+//   "include": [
+//     "capacitor.config.ts",
+//     "jest.config.ts",
+//     "src/setupTests.ts",
+//     "src/**/*.test.ts",
+//     "src/**/*.spec.ts",
+//     "src/**/*.test.tsx",
+//     "src/**/*.spec.tsx",
+//     "src/**/*.test.js",
+//     "src/**/*.spec.js",
+//     "src/**/*.test.jsx",
+//     "src/**/*.spec.jsx",
+//     "src/**/*.d.ts"
+//   ],
+//   "files": [
+//     "../../node_modules/@nx/react/typings/cssmodule.d.ts",
+//     "../../node_modules/@nx/react/typings/image.d.ts"
+//   ]
+// }
+
+
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["@testing-library/jest-dom",
+      "vitest/globals",
+      "vitest/importMeta",
+      "vite/client",
+      "node",
+      "vitest"
+    ]
+  },
+  "include": [
+    "vite.config.mts",
+    "vitest.config.ts",
+    "src/setupTests.ts",
+    "src/**/*.test.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.tsx",
+    "src/**/*.test.js",
+    "src/**/*.spec.js",
+    "src/**/*.test.jsx",
+    "src/**/*.spec.jsx",
+    "src/**/*.d.ts"
+  ]
+}

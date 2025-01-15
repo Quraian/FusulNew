@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "التقويم الدراسي",
+    "titleEn": "School Calendar",
+    "group": "Education",
+    "description": null,
+    "color": "TEAL",
+    "periods": [
+      { "id": 1, "title": "1443", "titleEn": "1443", "calendarId": 1 },
+      { "id": 2, "title": "1444", "titleEn": "1444", "calendarId": 1 },
+      { "id": 3, "title": "1445", "titleEn": "1445", "calendarId": 1 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "الرواتب الحكومية",
+    "titleEn": "Gov Salaries",
+    "group": "Education",
+    "description": null,
+    "color": "DARKVIOLET",
+    "periods": [
+      { "id": 4, "title": "2023", "titleEn": "2023", "calendarId": 2 },
+      { "id": 5, "title": "2024", "titleEn": "2024", "calendarId": 2 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "المنازل القمرية (الأنواء)",
+    "titleEn": "Lunar station (Arabic manzil)",
+    "group": "SeasonsAndAstronomy",
+    "description": null,
+    "color": "DODGERBLUE",
+    "periods": [{ "id": 6, "title": "2023", "titleEn": "2023", "calendarId": 3 }]
+  }
+]
