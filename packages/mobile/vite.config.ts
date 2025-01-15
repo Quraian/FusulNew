@@ -11,12 +11,3 @@ export default defineConfig({
     setupFiles: './src/setupTests.ts',
   },
 });
-
-// export default defineConfig({
-//   root: './src',
-//   build: {
-//     outDir: '../dist',
-//     minify: false,
-//     emptyOutDir: true,
-//   },
-// });
