@@ -7,6 +7,11 @@
     "dev": "vite",
     "test": "vitest run",
     "build": "tsc -b && vite build",
+    "copy:android": "npx cap copy android",
+    "sync:android": "npx cap sync android",
+    "open:android": "npx cap open android",
+    "build:android": "pnpm run build && pnpm run copy:android && pnpm run sync:android",
+    "run:android": "pnpm cap run android",
     "lint": "eslint .",
     "preview": "vite preview"
   },
