@@ -15,9 +15,11 @@ import {
   CalendarEvent,
   groupBy,
 } from '@fusul/common';
-import { RootState, eventsAdapter } from '.';
+// import { RootState, eventsAdapter } from './';
 import { CalendarOptions, Status } from '../common';
 import { calendarsAdapter } from './slices/calendarSlice';
+import { RootState } from '.';
+import { eventsAdapter } from './slices/eventSlice';
 
 export const selectCalendarOptions = (state: RootState) =>
   state.user.preferences.calendarOptions;

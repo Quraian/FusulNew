@@ -1,18 +1,20 @@
 import { Middleware, isAnyOf } from '@reduxjs/toolkit';
 
-import {
-  RootState,
-  eventsReceived,
-  selectCalendars,
-  selectEventsWithUpdatedOn,
-  selectUser,
-  setCalendarOptions,
-  setLanguage,
-  setUserCity,
-} from '.';
 import { persisCalendars, persisEvents, persisUserState } from '../common';
 import { weatherApi } from './services/weatherApi';
 import { calendarsReceived } from './slices/calendarSlice';
+import { RootState } from '.';
+import {
+  selectUser,
+  selectCalendars,
+  selectEventsWithUpdatedOn,
+} from './selectors';
+import { eventsReceived } from './slices/eventSlice';
+import {
+  setLanguage,
+  setCalendarOptions,
+  setUserCity,
+} from './slices/userSlice';
 
 const isPersistanceRelatedAction = isAnyOf(
   setLanguage,
