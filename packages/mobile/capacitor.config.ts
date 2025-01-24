@@ -3,7 +3,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'app.fusul',
   appName: 'Fusul',
-  webDir: '../../dist/packages/mobile',
+  webDir: 'dist',
   includePlugins: [
     '@capacitor/app',
     '@capacitor/geolocation',
