@@ -12,12 +12,18 @@ export default defineConfig({
     },
   },
   test: {
+    include: [
+      'src/**/*.spec.{js,jsx,ts,tsx}',
+      'src/**/*.test.{js,jsx,ts,tsx}',
+      'test/**/*.spec.{js,jsx,ts,tsx}',
+      'test/**/*.test.{js,jsx,ts,tsx}',
+    ],
     globals: true,
-    setupFiles: './vitest.setup.ts',
-    root: './',
+    // setupFiles: path.resolve(__dirname, './vitest.setup.ts'),
+    // root: './',
     environment: 'node',
     env: {
-      ...config({ path: '../../.env.test' }).parsed,
+      ...config({ path: path.resolve(__dirname, '../../.env.test') }).parsed,
     },
     testTimeout: 1000,
   },

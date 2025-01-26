@@ -20,7 +20,6 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
-    "@prisma/client": "catalog:",
     "@umalqura/core": "^0.0.7",
     "prisma": "catalog:",
     "react": "catalog:",

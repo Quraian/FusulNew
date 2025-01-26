@@ -1,5 +1,4 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { CalendarPeriod } from '@prisma/client';
 
 import {
   parseDate,
@@ -14,6 +13,7 @@ import {
   Calendar,
   CalendarEvent,
   groupBy,
+  CalendarPeriod,
 } from '@fusul/common';
 // import { RootState, eventsAdapter } from './';
 import { CalendarOptions, Status } from '../common';

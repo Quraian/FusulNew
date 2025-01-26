@@ -10,7 +10,7 @@
     "copy:android": "npx cap copy android",
     "sync:android": "npx cap sync android",
     "open:android": "npx cap open android",
-    "build:android": "pnpm run build && pnpm run copy:android && pnpm run sync:android",
+    "build:android": "pnpm run build && pnpm run sync:android",
     "run:android": "pnpm cap run android",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -26,7 +26,6 @@
     "@ionic/core": "^8.4.1",
     "@ionic/react": "^8.4.1",
     "@ionic/react-router": "^8.4.1",
-    "@prisma/client": "catalog:",
     "@reduxjs/toolkit": "^2.5.0",
     "adhan": "^4.4.3",
     "axios": "^1.7.9",
@@ -57,7 +56,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.4",
     "jsdom": "^26.0.0",
-    "nock": "^13.5.6",
+    "nock": "^14.0.0",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
     "whatwg-fetch": "^3.6.20"
