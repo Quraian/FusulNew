@@ -1,4 +1,5 @@
 - right now hardcoding some types from prisma client, review this
+- cleanup env variables usage (use vite)
 - unplugin-swc, not needed if we cover tests using e2e
   - also no need nock
 - [Vite coverage](https://vitest.dev/guide/coverage)

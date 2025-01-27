@@ -60,6 +60,7 @@
     "nock": "^14.0.0",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
+    "vite": "catalog:",
     "whatwg-fetch": "^3.6.20"
   }
 }
