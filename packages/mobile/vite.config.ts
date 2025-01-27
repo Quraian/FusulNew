@@ -6,10 +6,21 @@ import { config } from 'dotenv';
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const isTesting = mode === 'test';
+  const isProduction = mode === 'production';
 
-  config({
-    path: path.resolve(__dirname, isTesting ? '../../.env.test' : '../../.env'),
-  });
+  if (isTesting) {
+    config({
+      path: path.resolve('../../.env.test'),
+    });
+  } else if (isProduction) {
+    config({
+      path: path.resolve('../../.env.production'),
+    });
+  } else {
+    config({
+      path: path.resolve('../../.env'),
+    });
+  }
 
   return {
     plugins: [react()],

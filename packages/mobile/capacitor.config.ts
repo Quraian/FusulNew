@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'app.fusul',
-  appName: 'Fusul',
+  appName: 'Fusul2',
   webDir: 'dist',
   includePlugins: [
     '@capacitor/app',
