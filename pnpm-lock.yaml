@@ -9,6 +9,9 @@ catalogs:
     '@prisma/client':
       specifier: ^6.2.1
       version: 6.2.1
+    dotenv:
+      specifier: ^16.4.7
+      version: 16.4.7
     prisma:
       specifier: ^6.2.1
       version: 6.2.1
@@ -52,7 +55,7 @@ importers:
         specifier: 18.3.3
         version: 18.3.3
       dotenv:
-        specifier: ^16.4.7
+        specifier: 'catalog:'
         version: 16.4.7
       eslint:
         specifier: ^9.18.0
@@ -341,6 +344,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.4
         version: 4.3.4(vite@5.4.14(@types/node@22.10.7)(terser@5.37.0))
+      dotenv:
+        specifier: 'catalog:'
+        version: 16.4.7
       jsdom:
         specifier: ^26.0.0
         version: 26.0.0

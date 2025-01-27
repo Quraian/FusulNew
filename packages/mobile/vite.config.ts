@@ -1,6 +1,9 @@
 import { defineConfig } from 'vitest/config';
-
 import react from '@vitejs/plugin-react';
+import path from 'path';
+import { config } from 'dotenv';
+
+config({ path: path.resolve(__dirname, '../../.env') });
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,6 +14,9 @@ export default defineConfig({
   //   minify: false,
   //   emptyOutDir: true,
   // },
+  define: {
+    'import.meta.env': process.env, // Make all variables available in import.meta.env
+  },
   test: {
     globals: true,
     environment: 'jsdom',

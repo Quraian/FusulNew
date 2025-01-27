@@ -55,6 +55,7 @@
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "dotenv": "catalog:",
     "jsdom": "^26.0.0",
     "nock": "^14.0.0",
     "typescript": "catalog:",

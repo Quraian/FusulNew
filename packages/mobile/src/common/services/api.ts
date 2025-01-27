@@ -5,8 +5,6 @@ import {
   retry,
 } from '@reduxjs/toolkit/query/react';
 
-import { environment } from '../../environments/environment';
-
 export const NetworkConstants: SubscriptionOptions = {
   refetchOnFocus: false,
   refetchOnReconnect: true,
@@ -17,11 +15,11 @@ const baseQuery = fetchBaseQuery({
   // fetchFn is required otherwise the following warning will show up during testing
   // Warning: `fetch` is not available. Please supply a custom `fetchFn` property to use `fetchBaseQuery` on SSR environments.
   // fetchFn: (input: RequestInfo, init?: RequestInit | undefined) => fetch(input, init),
-  baseUrl: `${environment.apiUrl}/api/`,
+  baseUrl: `${import.meta.env['VITE_API_URL']}/api/`,
 });
 
 const baseQueryWithRetry = retry(baseQuery, {
-  maxRetries: environment.production ? 3 : 0,
+  maxRetries: import.meta.env.PROD ? 3 : 0,
 });
 
 /**
