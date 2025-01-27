@@ -15,7 +15,7 @@ export function isProduction() {
 }
 
 export function readNodeEnvironment() {
-  return process.env['NODE_ENV'];
+  return import.meta.env.MODE;
 }
 
 export function readRedisUrl() {
