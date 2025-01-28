@@ -33,7 +33,7 @@ export const calendarsApi = api.injectEndpoints({
             dispatch(calendarsReceived(data));
           });
         } catch (error) {
-          console.error({ error });
+          console.log('Query failed:', error);
         }
       },
       transformResponse: (response) => CalendarSchema.array().parse(response),

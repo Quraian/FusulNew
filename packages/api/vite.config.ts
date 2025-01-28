@@ -26,6 +26,7 @@ export default defineConfig({
       ...config({ path: path.resolve(__dirname, '../../.env.test') }).parsed,
     },
     testTimeout: 1000,
+    reporters: ['verbose'],
   },
   plugins: [
     // This is required to build the test files with SWC

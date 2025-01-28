@@ -15,7 +15,7 @@ export const weatherApi = api.injectEndpoints({
             }
           });
         } catch (error) {
-          console.error({ error });
+          console.log('Query failed:', error);
         }
       },
       transformResponse: (response) => WeatherSchema.parse(response),

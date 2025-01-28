@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => {
   const isTesting = mode === 'test';
   const isProduction = mode === 'production';
 
+  // TODO: share configs?
   if (isTesting) {
     config({
       path: path.resolve('../../.env.test'),
@@ -31,6 +32,7 @@ export default defineConfig(({ mode }) => {
       globals: true,
       environment: 'jsdom',
       setupFiles: './src/setupTests.ts',
+      reporters: ['verbose'],
     },
   };
 });
