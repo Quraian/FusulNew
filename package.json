@@ -4,8 +4,7 @@
   "scripts": {
     "postinstall": "pnpm --filter db generate:client",
     "pretest": "pnpm common build && pnpm data build",
-    "--test": "pnpm common test && pnpm data test && pnpm api test",
-    "test": "vitest run",
+    "test": "vitest run && pnpm e2e test",
     "lint": "pnpm eslint .",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\"",
     "api": "pnpm --filter api",
@@ -13,6 +12,7 @@
     "mobile": "pnpm --filter mobile",
     "data": "pnpm --filter data",
     "db": "pnpm --filter db",
+    "e2e": "pnpm --filter e2e",
     "check:outdated": "pnpm outdated --recursive"
   },
   "keywords": [],
