@@ -22,16 +22,9 @@
     "node": ">=22.11.0"
   },
   "type": "module",
-  "dependencies": {
-    "i18next": "^24.2.1",
-    "luxon": "^3.5.0",
-    "react-i18next": "^15.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.18.0",
-    "@types/luxon": "^3.4.2",
-    "@types/node": "^22.10.7",
-    "@types/react": "18.3.3",
     "dotenv": "catalog:",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",

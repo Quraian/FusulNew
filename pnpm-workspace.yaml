@@ -1,6 +1,5 @@
 packages:
   - 'packages/*'
-  - 'apps/*'
 
 catalog:
   '@prisma/client': '^6.2.1'
@@ -8,6 +7,11 @@ catalog:
   'typescript': '~5.6.3'
   'typescript-eslint': '^8.19.0'
   'react': '^18.3.1'
-  'react-dom': '^18.3.1'
+  '@types/react': '^18.3.18'
+  'i18next': '^24.2.0'
+  'react-i18next': '^15.4.0'
   'dotenv': '^16.4.7'
   'vite': '^6.0.11'
+  '@types/node': '^22.12.0'
+  'luxon': '^3.5.0'
+  '@types/luxon': '^3.4.2'

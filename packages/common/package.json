@@ -20,9 +20,16 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
+    "@types/react": "catalog:",
     "@umalqura/core": "^0.0.7",
+    "i18next": "catalog:",
+    "luxon": "catalog:",
     "prisma": "catalog:",
     "react": "catalog:",
+    "react-i18next": "catalog:",
     "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/luxon": "catalog:"
   }
 }
