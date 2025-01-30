@@ -455,6 +455,15 @@ importers:
         specifier: 'catalog:'
         version: 6.0.11(@types/node@22.12.0)(sugarss@4.0.1(postcss@8.5.1))(terser@5.37.0)
 
+  packages/website-e2e:
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.50.0
+        version: 1.50.0
+      '@types/node':
+        specifier: ^22.12.0
+        version: 22.12.0
+
 packages:
 
   '@adobe/css-tools@4.4.1':

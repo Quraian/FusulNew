@@ -25,6 +25,14 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    server: {
+      port: 5173,
+      host: 'localhost',
+    },
+    preview: {
+      port: 5174,
+      host: 'localhost',
+    },
     define: {
       'import.meta.env': process.env, // Make all variables available in import.meta.env
     },
