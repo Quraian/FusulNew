@@ -246,15 +246,6 @@ importers:
         specifier: 'catalog:'
         version: 6.2.1
 
-  packages/e2e:
-    devDependencies:
-      '@playwright/test':
-        specifier: ^1.50.0
-        version: 1.50.0
-      '@types/node':
-        specifier: ^22.12.0
-        version: 22.12.0
-
   packages/mobile:
     dependencies:
       '@capacitor/android':
@@ -390,6 +381,15 @@ importers:
       whatwg-fetch:
         specifier: ^3.6.20
         version: 3.6.20
+
+  packages/mobile-e2e:
+    devDependencies:
+      '@playwright/test':
+        specifier: ^1.50.0
+        version: 1.50.0
+      '@types/node':
+        specifier: ^22.12.0
+        version: 22.12.0
 
   packages/website:
     dependencies:
