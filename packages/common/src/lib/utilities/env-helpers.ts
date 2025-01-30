@@ -23,11 +23,11 @@ export function readRedisUrl() {
 }
 
 export function readRedisHost() {
-  return process.env['REDIS_HOST'] || '0.0.0.0';
+  return import.meta.env['REDIS_HOST'] || '0.0.0.0';
 }
 
 export function readRedisPort() {
-  return parseInt(process.env['REDIS_PORT'] || '6379');
+  return parseInt(import.meta.env['REDIS_PORT'] || '6379');
 }
 
 export function readWeatherApiKey() {

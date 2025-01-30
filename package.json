@@ -7,11 +7,12 @@
     "test": "vitest run && pnpm e2e test",
     "lint": "pnpm eslint .",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\"",
-    "api": "pnpm --filter api",
     "common": "pnpm --filter common",
-    "mobile": "pnpm --filter mobile",
     "data": "pnpm --filter data",
     "db": "pnpm --filter db",
+    "api": "pnpm --filter api",
+    "mobile": "pnpm --filter mobile",
+    "website": "pnpm --filter website",
     "e2e": "pnpm --filter e2e",
     "check:outdated": "pnpm outdated --recursive"
   },
@@ -31,7 +32,6 @@
     "@eslint/js": "^9.18.0",
     "@types/luxon": "^3.4.2",
     "@types/node": "^22.10.7",
-    "@types/react": "18.3.3",
     "dotenv": "catalog:",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",
@@ -46,6 +46,6 @@
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
     "vite": "catalog:",
-    "vitest": "^3.0.4"
+    "vitest": "catalog:"
   }
 }
