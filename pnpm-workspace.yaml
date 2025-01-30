@@ -1,6 +1,5 @@
 packages:
   - 'packages/*'
-  - 'apps/*'
 
 catalog:
   '@prisma/client': '^6.2.1'
