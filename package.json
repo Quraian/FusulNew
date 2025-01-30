@@ -15,7 +15,9 @@
     "mobile:e2e": "pnpm --filter mobile-e2e",
     "website": "pnpm --filter website",
     "website:e2e": "pnpm --filter website-e2e",
-    "check:outdated": "pnpm outdated --recursive"
+    "check:outdated": "pnpm outdated --recursive",
+    "upgrade": "pnpm upgrade --recursive",
+    "clean": "pnpm recursive exec rm -rf node_modules dist playwright-report test-results"
   },
   "keywords": [],
   "author": "",
