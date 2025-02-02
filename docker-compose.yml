@@ -1,0 +1,31 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: packages/api/Dockerfile
+    container_name: fusul_backend
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:postgres@host.docker.internal:54322/postgres
+      - REDIS_HOST=fusul_redis
+      - APP_DOMAIN=localhost
+      - APP_PORT=3000
+      - OPEN_WEATHER_MAP_API_KEY=de84a13cc133a33d33a33b6ebc3e2b72
+    networks:
+      - supabase_network_fusul-db
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    container_name: fusul_redis
+    networks:
+      - supabase_network_fusul-db
+    ports:
+      - '6379:6379'
+
+networks:
+  supabase_network_fusul-db:
+    external: true

@@ -1,0 +1,84 @@
+name: fusul-testing
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./packages/api/Dockerfile.test
+      # target: production
+    container_name: fusul-testing-api
+    environment:
+      NODE_ENV: test
+      DATABASE_URL: postgresql://postgres:postgres@fusul-postgres-test:5433/tests
+      OPEN_WEATHER_MAP_API_KEY: de84a13cc133a33d33a33b6ebc3e2b72
+      APP_DOMAIN: fusul-testing-api
+      APP_PORT: 3000
+      REDIS_HOST: fusul_redis_test
+    networks:
+      - fusul-testing-network
+    volumes:
+      - ./packages:/usr/src/app/packages
+    ports:
+      - '3000:3000'
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://0.0.0.0:3000/api/health']
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    # depends_on:
+    # - redis
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  postgres:
+    image: supabase/postgres:15.8.1.020
+    container_name: fusul-postgres-test
+    networks:
+      - fusul-testing-network
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    environment:
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    # restart: always
+    container_name: fusul_redis_test
+    networks:
+      - fusul-testing-network
+    ports:
+      - '6378:6379'
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    networks:
+      - fusul-testing-network
+    environment:
+      NODE_ENV: test
+      DATABASE_URL: postgresql://postgres:postgres@fusul-postgres-test:5432/postgres
+      OPEN_WEATHER_MAP_API_KEY: de84a13cc133a33d33a33b6ebc3e2b72
+      APP_DOMAIN: fusul-testing-api
+      APP_PORT: 3000
+      REDIS_HOST: fusul_redis_test
+    volumes:
+      - .:/app
+    # command: sh -c "npm run test"
+    # depends_on:
+    # - api
+    depends_on:
+      api:
+        condition: service_healthy
+
+networks:
+  fusul-testing-network:
+    external: false
+    name: fusul-testing-network
