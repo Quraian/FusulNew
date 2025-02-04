@@ -4,6 +4,8 @@
   - also no need nock
 - [Vite coverage](https://vitest.dev/guide/coverage)
 
+- https://github.com/Quraian/Fusul/compare/main...simplify-test-setup
+
 - `docker run -d --name redis-server -p 6379:6379 redis`
 - `docker run -d --name redis-server-testing -p 6380:6379 redis`
 - `docker run --name my_postgres_container -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=tests -p 5433:5432 -d postgres`

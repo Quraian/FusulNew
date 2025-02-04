@@ -17,7 +17,7 @@
     "website:e2e": "pnpm --filter website-e2e",
     "check:outdated": "pnpm outdated --recursive",
     "upgrade": "pnpm upgrade --recursive",
-    "clean": "pnpm recursive exec rm -rf node_modules dist playwright-report test-results"
+    "clean": "pnpm exec rm -rf node_modules && pnpm recursive exec rm -rf node_modules dist playwright-report test-results"
   },
   "keywords": [],
   "author": "",
