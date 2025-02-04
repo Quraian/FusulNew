@@ -11,6 +11,7 @@
     "sync:android": "npx cap sync android",
     "open:android": "npx cap open android",
     "build:android": "pnpm run build && pnpm run sync:android",
+    "bundle:android": "cd ./android && ./build-bundle",
     "run:android": "pnpm cap run android",
     "copy:ios": "npx cap copy ios",
     "sync:ios": "npx cap sync ios",

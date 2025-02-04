@@ -1,0 +1,6 @@
+#!/bin/sh
+
+./gradlew clean
+./gradlew build -x lint
+./gradlew bundleRelease
+jarsigner -keystore /Users/m4design/Code/android.keystore ./app/build/outputs/bundle/release/app-release.aab android-production -storepass $KEY_STORE_PASS -keypass $KEY_PASS
