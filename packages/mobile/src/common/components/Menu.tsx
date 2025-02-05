@@ -3,11 +3,13 @@ import {
   IonContent,
   IonItem,
   IonLabel,
+  IonList,
   IonMenu,
   IonMenuToggle,
   IonSelect,
   IonSelectOption,
 } from '@ionic/react';
+import { useTranslation } from 'react-i18next';
 
 import './Menu.css';
 import { Language } from '@fusul/common';
@@ -17,7 +19,6 @@ import {
   selectPreferences,
   setLanguage,
 } from '../../store';
-import { useTranslation } from 'react-i18next';
 
 const Menu = forwardRef<HTMLIonMenuElement, { onDismiss: () => unknown }>(
   function Menu({ onDismiss, ...rest }: { onDismiss: () => unknown }, ref) {
@@ -33,9 +34,11 @@ const Menu = forwardRef<HTMLIonMenuElement, { onDismiss: () => unknown }>(
         type="overlay"
         side="start">
         <IonContent>
-          <IonMenuToggle>
+          <IonList>
             <IonItem routerLink="/settings">
-              <IonLabel>{t('Settings')}</IonLabel>
+              <IonMenuToggle autoHide={false}>
+                <IonLabel>{t('Settings')}</IonLabel>
+              </IonMenuToggle>
             </IonItem>
             <IonItem>
               <IonSelect
@@ -51,7 +54,7 @@ const Menu = forwardRef<HTMLIonMenuElement, { onDismiss: () => unknown }>(
                 <IonSelectOption value="en">English</IonSelectOption>
               </IonSelect>
             </IonItem>
-          </IonMenuToggle>
+          </IonList>
         </IonContent>
       </IonMenu>
     );
