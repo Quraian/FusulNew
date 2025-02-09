@@ -37,6 +37,8 @@ export const EventListItem = forwardRef<
     const remainingFormatted = useRemainingFormatter(remaining);
     const dispatch = useAppDispatch();
 
+    console.log({ events });
+
     return (
       <IonItem ref={ref}>
         <IonGrid>

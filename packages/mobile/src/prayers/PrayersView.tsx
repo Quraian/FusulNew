@@ -109,12 +109,18 @@ const PrayersViewMemoized = memo(
       </PrayersViewWrapper>
     );
   },
-  (v, o) =>
-    v.status === o.status &&
-    v.errorMessage === o.errorMessage &&
-    v.next?.name === o.next?.name &&
-    v.next?.time === o.next?.time &&
-    isEqual(v.prayers, o.prayers)
+  (v, o) => {
+    const equal =
+      v.status === o.status &&
+      v.errorMessage === o.errorMessage &&
+      v.next?.name === o.next?.name &&
+      v.next?.time === o.next?.time &&
+      isEqual(v.prayers, o.prayers);
+
+    console.log({ equal });
+
+    return equal;
+  }
 );
 
 export const PrayersView = (props: CommonProps) => {

@@ -19,28 +19,16 @@ import {
 } from '../common/components';
 import { EventsList } from '../calendars/EventsList';
 import { PrayersView } from '../prayers/PrayersView';
-import {
-  eventInFocusDismissed,
-  selectCalendarInFocus,
-  selectEventsByDate,
-  selectEventsInFocusByDate,
-  selectSingleCalendarInFocus,
-  useAppDispatch,
-  useAppSelector,
-} from '../store';
+import { eventInFocusDismissed, useAppDispatch } from '../store';
 import { useEvents } from '../calendars/useEvents';
 
 const MainPage = () => {
   const { t } = useTranslation();
 
   const modal = useRef<HTMLIonModalElement>(null);
-  const selectedCalendarInFocus = useAppSelector(selectCalendarInFocus);
-  const singleCalendarInFocus = useAppSelector(selectSingleCalendarInFocus);
   const dispatch = useAppDispatch();
 
-  const events = useEvents();
-  const eventsByDateMain = useAppSelector(selectEventsByDate);
-  const eventsByDateInner = useAppSelector(selectEventsInFocusByDate);
+  const { eventsByDateMain, eventsByDateInner, ...eventsRest } = useEvents();
   // Dismiss the modal when the back button is pressed
   const [isModalBackDismissed, setIsModalBackDismissed] = useState(false);
 
@@ -68,7 +56,7 @@ const MainPage = () => {
         className="ion-padding scroll-container">
         <ErrorBoundary error={t('UnableLoadEvents')}>
           <BackDismissibleModal
-            isOpen={singleCalendarInFocus && !isModalBackDismissed}
+            isOpen={eventsRest.singleCalendarInFocus && !isModalBackDismissed}
             onDismiss={() => setIsModalBackDismissed(true)}
             onDidDismiss={() => {
               dispatch(eventInFocusDismissed());
@@ -79,7 +67,9 @@ const MainPage = () => {
             handle={false}>
             <IonHeader>
               <IonToolbar
-                style={{ '--background': selectedCalendarInFocus?.color }}>
+                style={{
+                  '--background': eventsRest.selectedCalendarInFocus?.color,
+                }}>
                 <IonGrid>
                   <IonRow>
                     <IonCol size="12">
@@ -92,7 +82,7 @@ const MainPage = () => {
                           width: '100%',
                           color: 'white',
                         }}>
-                        <h1>{selectedCalendarInFocus?.title}</h1>
+                        <h1>{eventsRest.selectedCalendarInFocus?.title}</h1>
                       </IonText>
                     </IonCol>
                   </IonRow>
@@ -104,13 +94,13 @@ const MainPage = () => {
               style={{ height: '74vh' }}
               className="scroll-container-inner">
               <EventsList
-                {...events}
+                {...eventsRest}
                 eventsByDate={eventsByDateInner}
                 containerClassName="scroll-container-inner"
               />
             </IonContent>
           </BackDismissibleModal>
-          <EventsList {...events} eventsByDate={eventsByDateMain} />
+          <EventsList {...eventsRest} eventsByDate={eventsByDateMain} />
         </ErrorBoundary>
       </IonContent>
     </IonPage>
