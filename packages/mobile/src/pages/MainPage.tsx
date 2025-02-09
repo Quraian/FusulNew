@@ -29,6 +29,7 @@ import {
   useAppSelector,
 } from '../store';
 import { useEvents } from '../calendars/useEvents';
+import './MainPage.css';
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -52,7 +53,10 @@ const MainPage = () => {
           backgroundColor: 'var(--ion-color-primary)',
         }}>
         <ErrorBoundary error={t('UnableLoadWeather')}>
-          <IonToolbar color="primary" className="ion-no-border">
+          <IonToolbar
+            color="primary"
+            className="ion-no-border"
+            style={{ '--border-width': 0, '--box-shadow': 'none' }}>
             <TopBar />
           </IonToolbar>
         </ErrorBoundary>

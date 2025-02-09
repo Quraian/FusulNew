@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest run",
-    "build": "tsc --build --noEmit && vite build",
+    "build": "tsc --build && vite build",
     "copy:android": "npx cap copy android",
     "sync:android": "npx cap sync android",
     "open:android": "npx cap open android",
