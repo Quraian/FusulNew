@@ -54,9 +54,12 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-          
+
       - name: Install Playwright Browsers
         run: pnpm dlx playwright install --with-deps
+
+      - name: Run build deps
+        run: pnpm db build:deps
 
       - name: Run DB migrations
         run: pnpm db migrate:testEnv
