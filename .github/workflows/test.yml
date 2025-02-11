@@ -7,6 +7,12 @@ on:
   pull_request:
   workflow_dispatch:
 
+env:
+  DATABASE_URL: postgres://testuser:testpassword@localhost:5432/testdb
+  REDIS_URL: redis://localhost:6379
+  REDIS_HOST: localhost
+  VITE_API_URL: http://localhost:3000
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -56,9 +62,4 @@ jobs:
         run: pnpm db migrate:testEnv
 
       - name: Run tests
-        env:
-          DATABASE_URL: postgres://testuser:testpassword@localhost:5432/testdb
-          REDIS_URL: redis://localhost:6379
-          REDIS_HOST: localhost
-          VITE_API_URL: http://localhost:3000
         run: pnpm test
