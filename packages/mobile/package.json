@@ -7,6 +7,7 @@
     "dev": "vite",
     "test": "vitest run",
     "build": "tsc --build --noEmit && vite build",
+    "generate:assets": "pnpm exec capacitor-assets generate --assetPath ./public/assets",
     "copy:android": "npx cap copy android",
     "sync:android": "npx cap sync android",
     "open:android": "npx cap open android",
@@ -50,6 +51,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^7.0.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
