@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitest/config';
 
+process.env.TZ = 'Asia/Riyadh';
+
 export default defineConfig({
   build: {
     lib: {

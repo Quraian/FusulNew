@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "postinstall": "pnpm --filter db generate:client",
-    "pretest": "pnpm common build && pnpm data build",
+    "build:deps": "pnpm common build && pnpm data build",
+    "pretest": "pnpm build:deps",
     "test": "vitest run && pnpm mobile:e2e test && pnpm website:e2e test",
     "lint": "pnpm eslint .",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,md}\"",
