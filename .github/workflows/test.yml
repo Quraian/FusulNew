@@ -59,7 +59,7 @@ jobs:
         run: pnpm dlx playwright install --with-deps
 
       - name: Run build deps
-        run: pnpm db build:deps
+        run: pnpm build:deps
 
       - name: Run DB migrations
         run: pnpm db migrate:testEnv
