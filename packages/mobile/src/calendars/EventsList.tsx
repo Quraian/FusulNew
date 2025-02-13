@@ -70,11 +70,11 @@ export const EventsList = ({
     const timeoutId = setTimeout(() => {
       if (!hasScrolled) {
         itemRef.current?.scrollIntoView({
-          behavior: 'smooth',
+          behavior: 'instant',
           block: 'center',
         });
       }
-    }, 100);
+    }, 400);
 
     return () => clearTimeout(timeoutId);
   }, [hasScrolled]);
