@@ -22,13 +22,10 @@ import { PrayersView } from '../prayers/PrayersView';
 import {
   eventInFocusDismissed,
   selectCalendarInFocus,
-  selectEventsByDate,
-  selectEventsInFocusByDate,
   selectSingleCalendarInFocus,
   useAppDispatch,
   useAppSelector,
 } from '../store';
-import { useEvents } from '../calendars/useEvents';
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -38,9 +35,6 @@ const MainPage = () => {
   const singleCalendarInFocus = useAppSelector(selectSingleCalendarInFocus);
   const dispatch = useAppDispatch();
 
-  const events = useEvents();
-  const eventsByDateMain = useAppSelector(selectEventsByDate);
-  const eventsByDateInner = useAppSelector(selectEventsInFocusByDate);
   // Dismiss the modal when the back button is pressed
   const [isModalBackDismissed, setIsModalBackDismissed] = useState(false);
 
@@ -103,14 +97,10 @@ const MainPage = () => {
               scrollEvents
               style={{ height: '74vh' }}
               className="scroll-container-inner">
-              <EventsList
-                {...events}
-                eventsByDate={eventsByDateInner}
-                containerClassName="scroll-container-inner"
-              />
+              <EventsList inner />
             </IonContent>
           </BackDismissibleModal>
-          <EventsList {...events} eventsByDate={eventsByDateMain} />
+          <EventsList />
         </ErrorBoundary>
       </IonContent>
     </IonPage>

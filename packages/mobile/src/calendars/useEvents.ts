@@ -7,6 +7,8 @@ import {
 } from '../store/services/calendarsApi';
 import {
   selectCalendarsIdsToView,
+  selectEventsByDate,
+  selectEventsInFocusByDate,
   selectEventsMetadata,
   useAppSelector,
 } from '../store';
@@ -17,13 +19,13 @@ export interface UseEventsViewModel {
   isLoading: boolean;
   isFetching: boolean;
   errorMessage?: string;
-  eventsByDate?: EventsByDateViewModel[];
+  eventsByDate: EventsByDateViewModel[];
   nextPage: number | null;
   prevPage: number | null;
   triggerFetchEvents: (page?: number | null) => Promise<unknown>;
 }
 
-export function useEvents(): UseEventsViewModel {
+export function useEvents(inner = false): UseEventsViewModel {
   const { t } = useTranslation();
   const calendarsIdsToView = useAppSelector(selectCalendarsIdsToView);
   const {
@@ -64,6 +66,9 @@ export function useEvents(): UseEventsViewModel {
   const errorMessage =
     (calendarsFetchingError || error) && t('UnableFetchCalendars');
 
+  const eventsByDateMain = useAppSelector(selectEventsByDate);
+  const eventsByDateInner = useAppSelector(selectEventsInFocusByDate);
+
   return {
     errorMessage,
     isLoading: areCalendarsLoading || isLoading,
@@ -71,5 +76,6 @@ export function useEvents(): UseEventsViewModel {
     triggerFetchEvents,
     nextPage,
     prevPage,
+    eventsByDate: inner ? eventsByDateInner : eventsByDateMain,
   };
 }

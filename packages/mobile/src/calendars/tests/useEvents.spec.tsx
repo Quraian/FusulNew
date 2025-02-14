@@ -45,9 +45,10 @@ describe('useEvents', () => {
     const { triggerFetchEvents, ...rest } = result.current;
 
     expect(rest).toStrictEqual({
-      errorMessage: undefined,
       isLoading: true,
       isFetching: true,
+      errorMessage: undefined,
+      eventsByDate: [],
       nextPage: null,
       prevPage: null,
     });

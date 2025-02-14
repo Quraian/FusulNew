@@ -12,13 +12,11 @@ import {
 import { IonInfiniteScrollCustomEvent } from '@ionic/core';
 import { chevronCollapseOutline } from 'ionicons/icons';
 
-import { UseEventsViewModel } from './useEvents';
+import { useEvents } from './useEvents';
 import { EventListItem } from './EventListItem';
 import { DateView } from '../datetime/DateView';
 
-export const EventsList = (
-  props: UseEventsViewModel & { containerClassName?: string }
-) => {
+export const EventsList = ({ inner = false }: { inner?: boolean }) => {
   const {
     eventsByDate,
     triggerFetchEvents,
@@ -26,8 +24,8 @@ export const EventsList = (
     isFetching,
     nextPage,
     prevPage,
-    containerClassName = 'scroll-container',
-  } = props;
+  } = useEvents(inner);
+
   const [scrollEvent, setScrollEvent] = useState<
     IonInfiniteScrollCustomEvent<void> | undefined
   >();
@@ -53,7 +51,9 @@ export const EventsList = (
         setTodayDateVisible(entry.isIntersecting);
       },
       {
-        root: document.querySelector(`.${containerClassName}`),
+        root: document.querySelector(
+          `.scroll-container${inner ? '-inner' : ''}`
+        ),
         threshold: 1, // Trigger if at least 100% of the item is visible
       }
     );
@@ -67,7 +67,7 @@ export const EventsList = (
         observer.unobserve(currentTodayDateRef);
       }
     };
-  }, [containerClassName, eventsByDate]);
+  }, [eventsByDate, inner]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
