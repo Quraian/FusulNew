@@ -16,20 +16,23 @@ import { UseEventsViewModel } from './useEvents';
 import { EventListItem } from './EventListItem';
 import { DateView } from '../datetime/DateView';
 
-export const EventsList = ({
-  eventsByDate,
-  triggerFetchEvents,
-  isLoading,
-  isFetching,
-  nextPage,
-  prevPage,
-  containerClassName = 'scroll-container',
-}: UseEventsViewModel & { containerClassName?: string }) => {
+export const EventsList = (
+  props: UseEventsViewModel & { containerClassName?: string }
+) => {
+  const {
+    eventsByDate,
+    triggerFetchEvents,
+    isLoading,
+    isFetching,
+    nextPage,
+    prevPage,
+    containerClassName = 'scroll-container',
+  } = props;
   const [scrollEvent, setScrollEvent] = useState<
     IonInfiniteScrollCustomEvent<void> | undefined
   >();
-  const itemRef = useRef<HTMLIonItemElement>(null);
-  const [isItemVisible, setIsItemVisible] = useState(true);
+  const todayDateRef = useRef<HTMLIonItemElement>(null);
+  const [isTodayDateVisible, setTodayDateVisible] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -42,26 +45,26 @@ export const EventsList = ({
     triggerFetchEvents();
   }, [triggerFetchEvents]);
 
+  // Set FAB visibility based on whether the item is in the viewport
   useEffect(() => {
-    const currentItemRef = itemRef?.current;
+    const currentTodayDateRef = todayDateRef?.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Update visibility state based on whether the item is in the viewport
-        setIsItemVisible(entry.isIntersecting);
+        setTodayDateVisible(entry.isIntersecting);
       },
       {
-        root: document.querySelector(`.${containerClassName}`), // The scrollable container
+        root: document.querySelector(`.${containerClassName}`),
         threshold: 1, // Trigger if at least 100% of the item is visible
       }
     );
 
-    if (currentItemRef) {
-      observer.observe(currentItemRef);
+    if (currentTodayDateRef) {
+      observer.observe(currentTodayDateRef);
     }
 
     return () => {
-      if (currentItemRef) {
-        observer.unobserve(currentItemRef);
+      if (currentTodayDateRef) {
+        observer.unobserve(currentTodayDateRef);
       }
     };
   }, [containerClassName, eventsByDate]);
@@ -69,7 +72,7 @@ export const EventsList = ({
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (!hasScrolled) {
-        itemRef.current?.scrollIntoView({
+        todayDateRef.current?.scrollIntoView({
           behavior: 'instant',
           block: 'center',
         });
@@ -82,7 +85,7 @@ export const EventsList = ({
   return (
     <>
       <IonFab
-        hidden={isItemVisible}
+        hidden={isTodayDateVisible}
         slot="fixed"
         vertical="bottom"
         horizontal="end"
@@ -91,7 +94,7 @@ export const EventsList = ({
           size="small"
           color="secondary"
           onClick={() => {
-            itemRef.current?.scrollIntoView({
+            todayDateRef.current?.scrollIntoView({
               behavior: 'smooth',
               block: 'center',
             });
@@ -121,16 +124,11 @@ export const EventsList = ({
           eventsByDate?.map(({ startFormatted, firstInTheFuture, ...rest }) => (
             <Fragment key={firstInTheFuture ? 'separator' : startFormatted}>
               {firstInTheFuture && (
-                <IonItem color="light">
+                <IonItem ref={todayDateRef} color="light">
                   <DateView />
                 </IonItem>
               )}
-              <EventListItem
-                {...(firstInTheFuture ? { ref: itemRef } : {})}
-                {...rest}
-                startFormatted={startFormatted}
-                firstInTheFuture={firstInTheFuture}
-              />
+              <EventListItem {...rest} startFormatted={startFormatted} />
             </Fragment>
           ))
         )}
