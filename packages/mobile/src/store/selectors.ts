@@ -15,7 +15,6 @@ import {
   groupBy,
   CalendarPeriod,
 } from '@fusul/common';
-// import { RootState, eventsAdapter } from './';
 import { CalendarOptions, Status } from '../common';
 import { calendarsAdapter } from './slices/calendarSlice';
 import { RootState } from '.';
@@ -197,8 +196,9 @@ function groupEventsByDate(
   events: CalendarEvent[],
   {
     locale,
+    isArabic,
     calendarOptions: { remainingDays: remainingDaysOption },
-  }: { locale: string; calendarOptions: CalendarOptions }
+  }: { locale: string; isArabic: boolean; calendarOptions: CalendarOptions }
 ) {
   if (!calendars) {
     console.error('Calendars are not found, unable to get events.');
@@ -237,7 +237,7 @@ function groupEventsByDate(
     : null;
 
   return Object.entries(groupBy(withColors, (e) => e.start)).map(
-    ([date, events]) => {
+    ([date, eventsOfSameDate]) => {
       const start = parseDate(date);
       const remaining =
         remainingDaysOption === 'none'
@@ -248,10 +248,14 @@ function groupEventsByDate(
       const weekday = getWeekdayDay(start, locale);
 
       return {
-        events,
+        events: eventsOfSameDate.sort((a, b) =>
+          isArabic
+            ? a.title.localeCompare(b.title)
+            : a.titleEn.localeCompare(b.titleEn)
+        ),
         // firstInTheFuture, means this group is the first one that has events in the future
         firstInTheFuture: firstInTheFutureOrToday
-          ? events.some((e) => e.id === firstInTheFutureOrToday.id)
+          ? eventsOfSameDate.some((e) => e.id === firstInTheFutureOrToday.id)
           : false,
         remaining,
         startFormatted,
