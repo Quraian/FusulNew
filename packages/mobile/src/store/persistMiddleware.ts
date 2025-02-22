@@ -16,7 +16,7 @@ import {
   setUserCity,
 } from './slices/userSlice';
 
-const isPersistanceRelatedAction = isAnyOf(
+const isPersistenceRelatedAction = isAnyOf(
   setLanguage,
   setCalendarOptions,
   setUserCity,
@@ -30,7 +30,7 @@ export const persistMiddleware: Middleware<unknown, RootState> =
     const result = next(action);
     const state = getState();
 
-    if (isPersistanceRelatedAction(action)) {
+    if (isPersistenceRelatedAction(action)) {
       await persisUserState(selectUser(state));
     } else if (calendarsReceived.match(action)) {
       await persisCalendars(selectCalendars(state));

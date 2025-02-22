@@ -1,12 +1,6 @@
 import { Preferences } from '@capacitor/preferences';
 
 import {
-  EVENTS_META_DEFAULT_VALUES,
-  UserState,
-  UserStateSchema,
-  buildUserState,
-} from '../store';
-import {
   Calendar,
   CalendarEvent,
   CalendarEventSchema,
@@ -15,6 +9,12 @@ import {
   PaginationMetaData,
   uniqWith,
 } from '@fusul/common';
+import {
+  EVENTS_META_DEFAULT_VALUES,
+  UserState,
+  UserStateSchema,
+  buildUserState,
+} from '../store';
 
 enum Keys {
   UserState = 'UserState',
@@ -74,7 +74,6 @@ export function persisUserState(state: UserState): Promise<void> {
 }
 
 export async function loadUserState(): Promise<UserState> {
-  // const [userState] = await Promise.all([loadUserState()]);
   return load(Keys.UserState, (val) => {
     if (val) {
       const parsed = UserStateSchema.safeParse(JSON.parse(val));
@@ -105,7 +104,7 @@ export function persisEvents(
     updatedOn &&
       Preferences.set({
         key: Keys.EventsUpdatedOn,
-        value: updatedOn?.toISOString(),
+        value: updatedOn.toISOString(),
       }),
   ]);
 }
