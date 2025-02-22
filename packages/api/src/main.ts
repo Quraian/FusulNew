@@ -35,7 +35,6 @@ async function bootstrap() {
 export function prepareApp(app: INestApplication) {
   app.setGlobalPrefix(globalPrefix);
   app.useGlobalInterceptors(new LoggerInterceptor());
-  // app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
