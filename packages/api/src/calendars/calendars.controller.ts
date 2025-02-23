@@ -1,6 +1,6 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 
-import { Calendar } from '@fusul/common';
+import type { Calendar } from '@fusul/common';
 import { CalendarByIdPipe } from './calendar-by-id-pipe';
 import { CalendarsService } from './calendars.service';
 import { GetEventsFilters, GetEventsQuery } from './dtos';

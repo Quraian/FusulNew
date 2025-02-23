@@ -6,7 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
+    "build": "vite build",
+    "dev": "vite",
     "test": "vitest run",
     "start": "pnpm dlx dotenv-cli -e ../../.env -- nest start",
     "start:testEnv": "pnpm dlx dotenv-cli -e ../../.env.test -- nest start",
@@ -45,6 +46,7 @@
     "swc-loader": "^0.2.6",
     "ts-loader": "^9.5.2",
     "unplugin-swc": "^1.5.1",
-    "vite": "catalog:"
+    "vite": "catalog:",
+    "vite-plugin-node": "^4.0.0"
   }
 }
