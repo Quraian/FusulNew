@@ -1,1 +1,1 @@
-web: pnpm api start
+web: pnpm build:deps && pnpm api start
