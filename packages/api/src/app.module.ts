@@ -18,7 +18,7 @@ import { HealthModule } from './health/health.module';
       },
       {
         rootPath: join(__dirname, '../../..', 'dist/packages/website'),
-        exclude: ['/api/(.*)'],
+        exclude: ['/api/{*path}'],
       }
     ),
     PrismaModule,
