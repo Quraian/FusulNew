@@ -14,9 +14,9 @@
     "db": "pnpm --filter db",
     "api": "pnpm --filter api",
     "mobile": "pnpm --filter mobile",
-    "mobile:e2e": "pnpm --filter mobile-e2e",
+    "mobile-e2e": "pnpm --filter mobile-e2e",
     "website": "pnpm --filter website",
-    "website:e2e": "pnpm --filter website-e2e",
+    "website-e2e": "pnpm --filter website-e2e",
     "check:outdated": "pnpm outdated --recursive",
     "upgrade": "pnpm upgrade --recursive",
     "clean": "rm -rf dist && pnpm exec rm -rf node_modules && pnpm recursive exec rm -rf node_modules dist playwright-report test-results"

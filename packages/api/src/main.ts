@@ -6,15 +6,16 @@ import {
 } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
-import { isProduction, isTesting, readAppPort } from '@fusul/common';
+import { readAppPort } from '@fusul/common';
 import { AppModule } from './app.module';
 import { DelayInterceptor } from './common/delay.interceptor';
 import { LoggerInterceptor } from './common/logger.interceptor';
 
 const globalPrefix = 'api';
+const isProduction = import.meta.env.PROD;
 
 async function bootstrap() {
-  const logLevels: LogLevel[] = isProduction()
+  const logLevels: LogLevel[] = isProduction
     ? ['error', 'warn', 'log']
     : ['error', 'warn', 'log', 'debug', 'verbose'];
   const app = await NestFactory.create(AppModule, {
@@ -25,11 +26,13 @@ async function bootstrap() {
   prepareApp(app);
 
   // for unit/integrated testing, the server will not be running to make sure that mocked apis will be used
-  if (!isTesting()) {
+  if (isProduction) {
     await app.listen(port, '0.0.0.0');
     // app.listen() needs to be called before calling app.getUrl()
     Logger.log(`🚀 Application is running on: ${await app.getUrl()}`);
   }
+
+  return app;
 }
 
 export function prepareApp(app: INestApplication) {
@@ -54,4 +57,4 @@ export function prepareApp(app: INestApplication) {
   }
 }
 
-bootstrap();
+export const viteNodeApp = bootstrap();

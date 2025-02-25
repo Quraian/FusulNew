@@ -15,7 +15,7 @@ export default defineConfig({
     port: 3000,
   },
   build: {
-    ssr: true,
+    // ssr: true,
     // outDir: path.resolve(__dirname, '../../dist'),
     // emptyOutDir: true,
   },
@@ -45,11 +45,11 @@ export default defineConfig({
 
       // Optional, default: 'viteNodeApp'
       // the name of named export of you app from the appPath file
-      exportName: 'fusul-api',
+      // exportName: 'fusul-api',
 
       // Optional, default: false
       // if you want to init your app on boot, set this to true
-      initAppOnBoot: false,
+      initAppOnBoot: true,
 
       // Optional, default: 'esbuild'
       // The TypeScript compiler you want to use
@@ -57,7 +57,7 @@ export default defineConfig({
       // 'swc' compiler is supported to use as well for frameworks
       // like Nestjs (esbuild dont support 'emitDecoratorMetadata' yet)
       // you need to INSTALL `@swc/core` as dev dependency if you want to use swc
-      tsCompiler: 'esbuild',
+      tsCompiler: 'swc',
 
       // Optional, default: {
       // jsc: {
@@ -73,7 +73,9 @@ export default defineConfig({
       // }
       // }
       // swc configs, see [swc doc](https://swc.rs/docs/configuration/swcrc)
-      swcOptions: {},
+      swcOptions: {
+        // ...swcDefaultConfig,
+      },
     }),
   ],
 });

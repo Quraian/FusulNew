@@ -22,7 +22,7 @@ const __dirname = path.dirname(__filename);
       },
       {
         rootPath: join(__dirname, '../../..', 'dist/packages/website'),
-        exclude: ['/api/(.*)'],
+        exclude: ['/api/{*path}'],
       }
     ),
     PrismaModule,
