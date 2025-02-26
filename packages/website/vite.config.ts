@@ -13,6 +13,10 @@ export default defineConfig({
     port: 4301,
     host: 'localhost',
   },
+  build: {
+    outDir: '../../dist/packages/website',
+    emptyOutDir: true,
+  },
   test: {
     watch: false,
     globals: true,
