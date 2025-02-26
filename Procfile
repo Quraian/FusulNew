@@ -1,1 +1,1 @@
-web: pnpm api start
+web: pnpm api start:prod
