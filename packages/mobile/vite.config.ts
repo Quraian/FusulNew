@@ -24,9 +24,10 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    base: '/app/',
     build: {
-      base: './mobile/',
       outDir: join(__dirname, '../..', 'dist/packages/mobile'),
+      // assetsDir: './assets',
       emptyOutDir: true,
     },
     server: {
