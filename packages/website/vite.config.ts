@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { join, resolve } from 'path';
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
@@ -14,7 +14,7 @@ export default defineConfig({
     host: 'localhost',
   },
   build: {
-    outDir: '../../dist/packages/website',
+    outDir: join(__dirname, '../..', 'dist/packages/website'),
     emptyOutDir: true,
   },
   test: {
