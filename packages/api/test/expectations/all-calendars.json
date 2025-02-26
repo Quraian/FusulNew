@@ -72,7 +72,7 @@
     "group": "SalariesAndBenefits",
     "title": "الرواتب الحكومية",
     "titleEn": "Government Salaries",
-    "description": "​موعد صرف الرواتب",
+    "description": "موعد صرف الرواتب",
     "descriptionEn": "Salary payment dates",
     "color": "DARKVIOLET",
     "periods": [
@@ -91,100 +91,6 @@
     "periods": [
       { "id": 17, "title": "2024", "titleEn": "2024", "calendarId": 6 },
       { "id": 18, "title": "2025", "titleEn": "2025", "calendarId": 6 }
-    ]
-  },
-  {
-    "id": 34,
-    "group": "SeasonsAndAstronomy",
-    "title": "مواسم وفصول السنة",
-    "titleEn": "Seasons",
-    "description": "فصول السنة مع المواسم مثل الشبط، العقارب، المربعانية. إلخ..",
-    "descriptionEn": "The seasons of the year plus the agricultural/climatic local calendar",
-    "color": "DODGERBLUE",
-    "periods": [
-      { "id": 34, "title": "2023", "titleEn": "2023", "calendarId": 34 },
-      { "id": 35, "title": "2024", "titleEn": "2024", "calendarId": 34 },
-      { "id": 36, "title": "2025", "titleEn": "2025", "calendarId": 34 }
-    ]
-  },
-  {
-    "id": 35,
-    "group": "Religious",
-    "title": "التقويم الهجري",
-    "titleEn": "Hijri Calendar",
-    "description": "هو تقويم قمريّ، أي أنه يعتمد على دورة القمر لتحديد الأشهر، مكون من 12 شهرًا قمريًا في عام ذي 354 أو 355 يومًا. ويستخدمه المسلمون حاليًا خاصة في تحديد شهر رمضان، والأشهر الحُرُم، وأشهر الحج، والأعياد، وعدة الطلاق، وعدة الحامل، ودفع الزكاة.",
-    "descriptionEn": "is a lunar calendar consisting of 12 lunar months in a year of 354 or 355 days. It is used to determine the proper days of Islamic holidays and rituals, such as the annual fasting and the annual season for the great pilgrimage.",
-    "color": "PERU",
-    "periods": [
-      { "id": 37, "title": "1444", "titleEn": "1444", "calendarId": 35 },
-      { "id": 38, "title": "1445", "titleEn": "1445", "calendarId": 35 },
-      { "id": 39, "title": "1446", "titleEn": "1446", "calendarId": 35 }
-    ]
-  },
-  {
-    "id": 36,
-    "group": "Religious",
-    "title": "التقويم الإسلامي",
-    "titleEn": "Islamic Calendar",
-    "description": "اﻷيام المهمة في التقويم اﻹسلامي",
-    "descriptionEn": "Significant days in the Islamic calendar",
-    "color": "PERU",
-    "periods": [
-      { "id": 40, "title": "1444", "titleEn": "1444", "calendarId": 36 },
-      { "id": 41, "title": "1445", "titleEn": "1445", "calendarId": 36 },
-      { "id": 42, "title": "1446", "titleEn": "1446", "calendarId": 36 }
-    ]
-  },
-  {
-    "id": 37,
-    "group": "Education",
-    "title": "التقويم الدراسي",
-    "titleEn": "School Calendar",
-    "description": "التقويم الدراسي السعودي في التعليم العام",
-    "descriptionEn": "Saudi academic calendar in general education",
-    "color": "TEAL",
-    "periods": [
-      { "id": 43, "title": "1443", "titleEn": "1443", "calendarId": 37 },
-      { "id": 44, "title": "1444", "titleEn": "1444", "calendarId": 37 },
-      { "id": 45, "title": "1445", "titleEn": "1445", "calendarId": 37 },
-      {
-        "id": 46,
-        "title": "1447/1446",
-        "titleEn": "1447/1446",
-        "calendarId": 37
-      },
-      {
-        "id": 47,
-        "title": "1446/1447",
-        "titleEn": "1446/1447",
-        "calendarId": 37
-      }
-    ]
-  },
-  {
-    "id": 38,
-    "group": "SalariesAndBenefits",
-    "title": "الرواتب الحكومية",
-    "titleEn": "Government Salaries",
-    "description": "​موعد صرف الرواتب",
-    "descriptionEn": "Salary payment dates",
-    "color": "DARKVIOLET",
-    "periods": [
-      { "id": 48, "title": "2023", "titleEn": "2023", "calendarId": 38 },
-      { "id": 49, "title": "2024", "titleEn": "2024", "calendarId": 38 }
-    ]
-  },
-  {
-    "id": 39,
-    "group": "SalariesAndBenefits",
-    "title": "معاشات التقاعد والتأمينات",
-    "titleEn": "Pensions",
-    "description": "​موعد صرف معاشات التقاعد المدني والعسكري والتأمينات الإجتماعية",
-    "descriptionEn": "Pensions",
-    "color": "DARKVIOLET",
-    "periods": [
-      { "id": 50, "title": "2024", "titleEn": "2024", "calendarId": 39 },
-      { "id": 51, "title": "2025", "titleEn": "2025", "calendarId": 39 }
     ]
   }
 ]

@@ -19,8 +19,6 @@ export default defineConfig({
       'test/**/*.test.{js,jsx,ts,tsx}',
     ],
     globals: true,
-    // setupFiles: path.resolve(__dirname, './vitest.setup.ts'),
-    // root: './',
     environment: 'node',
     env: {
       ...config({ path: path.resolve(__dirname, '../../.env.test') }).parsed,
