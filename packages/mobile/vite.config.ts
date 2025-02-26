@@ -1,14 +1,13 @@
+import path, { join } from 'path';
+import { config } from 'dotenv';
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
-import path from 'path';
-import { config } from 'dotenv';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const isTesting = mode === 'test';
   const isProduction = mode === 'production';
 
-  // TODO: share configs?
   if (isTesting) {
     config({
       path: path.resolve('../../.env.test'),
@@ -25,6 +24,10 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    build: {
+      outDir: join(__dirname, '../..', 'dist/packages/mobile'),
+      emptyOutDir: true,
+    },
     server: {
       port: 5173,
       host: 'localhost',
