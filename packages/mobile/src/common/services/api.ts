@@ -11,11 +11,13 @@ export const NetworkConstants: SubscriptionOptions = {
   pollingInterval: 60 * 1000,
 } as const;
 
+const apiBseUrl = import.meta.env['VITE_API_URL'];
+
 const baseQuery = fetchBaseQuery({
   // fetchFn is required otherwise the following warning will show up during testing
   // Warning: `fetch` is not available. Please supply a custom `fetchFn` property to use `fetchBaseQuery` on SSR environments.
   // fetchFn: (input: RequestInfo, init?: RequestInit | undefined) => fetch(input, init),
-  baseUrl: `${import.meta.env['VITE_API_URL']}/api/`,
+  baseUrl: `${apiBseUrl ?? ''}/api/`,
 });
 
 const baseQueryWithRetry = retry(baseQuery, {
