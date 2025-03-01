@@ -7,6 +7,7 @@
     "dev": "vite",
     "test": "vitest run",
     "build": "tsc --build --noEmit && vite build",
+    "build:web": "pnpm run build --base=/app/",
     "generate:assets": "pnpm exec capacitor-assets generate --assetPath ./public/assets",
     "copy:android": "npx cap copy android",
     "sync:android": "npx cap sync android",

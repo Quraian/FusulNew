@@ -5,6 +5,7 @@
     "postinstall": "pnpm --filter db generate:client",
     "build:deps": "pnpm common build && pnpm data build",
     "build": "pnpm build:deps && pnpm api build && pnpm mobile build && pnpm website build",
+    "heroku-postbuild": "pnpm build:deps && pnpm api build && pnpm mobile build:web && pnpm website build",
     "pretest": "pnpm build:deps",
     "test": "vitest run && pnpm mobile:e2e test && pnpm website:e2e test",
     "lint": "pnpm eslint .",
