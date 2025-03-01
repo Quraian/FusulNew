@@ -6,7 +6,7 @@ include ':capacitor-app'
 project(':capacitor-app').projectDir = new File('../../../node_modules/.pnpm/@capacitor+app@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/app/android')
 
 include ':capacitor-geolocation'
-project(':capacitor-geolocation').projectDir = new File('../../../node_modules/.pnpm/@capacitor+geolocation@7.1.0_@capacitor+core@7.0.1/node_modules/@capacitor/geolocation/android')
+project(':capacitor-geolocation').projectDir = new File('../../../node_modules/.pnpm/@capacitor+geolocation@7.1.1_@capacitor+core@7.0.1/node_modules/@capacitor/geolocation/android')
 
 include ':capacitor-network'
 project(':capacitor-network').projectDir = new File('../../../node_modules/.pnpm/@capacitor+network@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/network/android')
