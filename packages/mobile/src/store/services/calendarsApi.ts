@@ -49,8 +49,6 @@ export const calendarsApi = api.injectEndpoints({
       //   },
       // }),
       async queryFn(arg, _queryApi, _extraOptions, fetch) {
-        // console.log({ arg });
-
         // get a random user
         // const randomResult = await fetch('users/random')
         // if (randomResult.error)

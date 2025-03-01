@@ -34,7 +34,6 @@ async function seeder(
 }
 
 export async function seedCities(prisma: PrismaClient) {
-  // await prisma.city.deleteMany();
   const { count } = await prisma.city.createMany({ data: getCities() });
 
   return count;
@@ -48,9 +47,6 @@ export async function seedCalendars(
   prismaService: PrismaClient,
   calendars: CalendarsListType
 ) {
-  // await prismaService.calendarEvent.deleteMany();
-  // await prismaService.calendar.deleteMany();
-
   for (const calendar of calendars) {
     try {
       await prismaService.calendar.create({

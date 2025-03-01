@@ -106,7 +106,7 @@ export function* generateCalendars(
   yield generateCalendar(govSalariesCalendar); // still not sure if gov salaries is repeating or not
   // ORDER MATTERS
 
-  // Rest
+  // The Rest
   // yield generateCalendar(lunarStationsCalendar, upToGregorianYear);
   yield generateCalendar(pensionsCalendar, upToGregorianYear);
 }

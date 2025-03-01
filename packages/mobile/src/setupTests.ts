@@ -28,7 +28,6 @@ const unBlockedDomains = [process.env['APP_DOMAIN'] ?? 'localhost'];
 nock.enableNetConnect((host) =>
   Boolean(unBlockedDomains.find((domain) => host.includes(domain)))
 );
-// nock.recorder.rec();
 
 beforeAll(() => {
   class MockIntersectionObserver implements IntersectionObserver {

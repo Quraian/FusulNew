@@ -24,6 +24,4 @@ export type ProspectivePeriod = Omit<
   'id' | 'calendarId'
 >;
 
-// export type ProspectiveEvent = Omit<Omit<CalendarEvent, 'title' | 'titleEn'> & { title?: string; titleEn?: string }, 'id' | 'periodId'>;
-
 export type ProspectiveEvent = Omit<CalendarEvent, 'id' | 'periodId'>;
