@@ -1,6 +1,7 @@
 import path, { join } from 'path';
 import { config } from 'dotenv';
 import { defineConfig } from 'vitest/config';
+import legacy from '@vitejs/plugin-legacy';
 import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
@@ -23,7 +24,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
-    plugins: [react()],
+    plugins: [react(), legacy()],
     base: '/app/',
     build: {
       outDir: join(__dirname, '../..', 'dist/packages/mobile'),

@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-commented-code */
 import { Suspense, useRef } from 'react';
 import {
   IonApp,
@@ -42,11 +43,11 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import { useLanguageHandler } from '@fusul/common';
 import { SettingsPage } from './settings/SettingsPage';
 import { NetworkConstants, Toaster } from './common';
 import { useFetchCalendarsQuery } from './store/services/calendarsApi';
 import { PreferredCalendarsSelectionPage } from './settings/PreferredCalendarsSelectionPage';
-import { useLanguageHandler } from '@fusul/common';
 import { selectPreferences, useAppSelector } from './store';
 
 setupIonicReact();

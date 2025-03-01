@@ -4,6 +4,7 @@
 - unplugin-swc, not needed if we cover tests using e2e
   - also no need nock
 - [Vite coverage](https://vitest.dev/guide/coverage)
+- Bug: right now, there is only single events metadata, so the data in useEvents is shared
 
 - https://github.com/Quraian/Fusul/compare/main...simplify-test-setup
 

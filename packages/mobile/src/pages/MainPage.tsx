@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import {
   IonCol,
   IonContent,
@@ -30,13 +30,10 @@ import {
 const MainPage = () => {
   const { t } = useTranslation();
 
-  const modal = useRef<HTMLIonModalElement>(null);
+  const modalRef = useRef<HTMLIonModalElement>(null);
   const selectedCalendarInFocus = useAppSelector(selectCalendarInFocus);
   const singleCalendarInFocus = useAppSelector(selectSingleCalendarInFocus);
   const dispatch = useAppDispatch();
-
-  // Dismiss the modal when the back button is pressed
-  const [isModalBackDismissed, setIsModalBackDismissed] = useState(false);
 
   return (
     <IonPage style={{ backgroundColor: 'white' }} id="main-content">
@@ -62,13 +59,12 @@ const MainPage = () => {
         className="ion-padding scroll-container">
         <ErrorBoundary error={t('UnableLoadEvents')}>
           <BackDismissibleModal
-            isOpen={singleCalendarInFocus && !isModalBackDismissed}
-            onDismiss={() => setIsModalBackDismissed(true)}
+            isOpen={singleCalendarInFocus}
+            onDismiss={() => {}}
             onDidDismiss={() => {
               dispatch(eventInFocusDismissed());
-              setIsModalBackDismissed(false);
             }}
-            ref={modal}
+            ref={modalRef}
             initialBreakpoint={0.85}
             handle={false}>
             <IonHeader>
