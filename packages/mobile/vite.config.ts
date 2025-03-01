@@ -1,4 +1,4 @@
-import path, { join } from 'path';
+import path from 'path';
 import { config } from 'dotenv';
 import { defineConfig } from 'vitest/config';
 import legacy from '@vitejs/plugin-legacy';
@@ -25,12 +25,12 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), legacy()],
-    base: '/app/',
-    build: {
-      outDir: join(__dirname, '../..', 'dist/packages/mobile'),
-      // assetsDir: './assets',
-      emptyOutDir: true,
-    },
+    // base: '/app/',
+    // build: {
+    //   outDir: join(__dirname, '../..', 'dist/packages/mobile'),
+    //   // assetsDir: './assets',
+    //   emptyOutDir: true,
+    // },
     server: {
       port: 5173,
       host: 'localhost',

@@ -4,6 +4,7 @@ import {
   IonContent,
   IonGrid,
   IonHeader,
+  IonModal,
   IonPage,
   IonRow,
   IonText,
@@ -11,12 +12,7 @@ import {
 } from '@ionic/react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  BackDismissibleModal,
-  CardContainer,
-  ErrorBoundary,
-  TopBar,
-} from '../common/components';
+import { CardContainer, ErrorBoundary, TopBar } from '../common/components';
 import { EventsList } from '../calendars/EventsList';
 import { PrayersView } from '../prayers/PrayersView';
 import {
@@ -58,9 +54,8 @@ const MainPage = () => {
         fixedSlotPlacement="before"
         className="ion-padding scroll-container">
         <ErrorBoundary error={t('UnableLoadEvents')}>
-          <BackDismissibleModal
+          <IonModal
             isOpen={singleCalendarInFocus}
-            onDismiss={() => {}}
             onDidDismiss={() => {
               dispatch(eventInFocusDismissed());
             }}
@@ -95,7 +90,7 @@ const MainPage = () => {
               className="scroll-container-inner">
               <EventsList inner />
             </IonContent>
-          </BackDismissibleModal>
+          </IonModal>
           <EventsList />
         </ErrorBoundary>
       </IonContent>
