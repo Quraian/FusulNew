@@ -1,20 +1,28 @@
 packages:
-  - 'packages/*'
-
+  - packages/*
 catalog:
-  '@prisma/client': '~6.2.1'
-  'prisma': '~6.2.1'
-  'typescript': '~5.6.3'
-  'typescript-eslint': '^8.25.0'
-  'react': '^18.3.1'
-  '@types/react': '^18.3.18'
-  'react-dom': '^18.3.1'
-  'react-router': '^5.3.4'
-  '@types/react-router': '^5.1.20'
-  '@types/react-dom': '^18.3.5'
-  'react-router-dom': '^5.3.4'
-  '@types/react-router-dom': '^5.3.3'
-  'dotenv': '^16.4.7'
-  'vite': '^6.1.0'
-  'vitest': '^3.0.5'
-  '@vitejs/plugin-react': '^4.3.4'
+  '@prisma/client': ~6.2.1
+  prisma: ~6.2.1
+  typescript: ~5.6.3
+  typescript-eslint: ^8.25.0
+  react: ^18.3.1
+  '@types/react': ^18.3.18
+  react-dom: ^18.3.1
+  react-router: ^5.3.4
+  '@types/react-router': ^5.1.20
+  '@types/react-dom': ^18.3.5
+  react-router-dom: ^5.3.4
+  '@types/react-router-dom': ^5.3.3
+  dotenv: ^16.4.7
+  vite: ^6.1.0
+  vitest: ^3.0.5
+  '@vitejs/plugin-react': ^4.3.4
+onlyBuiltDependencies:
+  - '@nestjs/core'
+  - '@prisma/client'
+  - '@prisma/engines'
+  - '@swc/core'
+  - core-js
+  - esbuild
+  - prisma
+  - sharp
