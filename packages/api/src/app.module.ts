@@ -13,7 +13,7 @@ import { HealthModule } from './health/health.module';
   imports: [
     ServeStaticModule.forRoot(
       {
-        rootPath: join(__dirname, '../../..', 'dist/packages/mobile'),
+        rootPath: join(__dirname, '../../..', 'packages/mobile/dist'),
         serveRoot: '/app',
       },
       {
