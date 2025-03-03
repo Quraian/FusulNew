@@ -1,25 +1,21 @@
 export function readAppPort() {
-  return process.env['PORT'] || process.env['APP_PORT'] || '3000';
+  return import.meta.env['PORT'] || import.meta.env['APP_PORT'] || '3000';
 }
 
 export function readAppDomain() {
-  return process.env['APP_DOMAIN'];
+  return import.meta.env['APP_DOMAIN'];
 }
 
 export function isTesting() {
-  return readNodeEnvironment() === 'test';
+  return import.meta.env.MODE === 'test';
 }
 
 export function isProduction() {
-  return readNodeEnvironment() === 'production';
-}
-
-export function readNodeEnvironment() {
-  return import.meta.env.MODE;
+  return import.meta.env.MODE === 'production';
 }
 
 export function readRedisUrl() {
-  return process.env['REDIS_URL'];
+  return import.meta.env['REDIS_URL'];
 }
 
 export function readRedisHost() {
@@ -31,7 +27,7 @@ export function readRedisPort() {
 }
 
 export function readWeatherApiKey() {
-  const apiKey = process.env['OPEN_WEATHER_MAP_API_KEY'];
+  const apiKey = import.meta.env['OPEN_WEATHER_MAP_API_KEY'];
 
   if (!apiKey) {
     throw Error('Unable to get API key from environment variables.');

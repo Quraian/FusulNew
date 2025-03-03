@@ -24,7 +24,7 @@ window.matchMedia =
 
 setupIonicReact();
 
-const unBlockedDomains = [process.env['APP_DOMAIN'] ?? 'localhost'];
+const unBlockedDomains = [import.meta.env['APP_DOMAIN'] ?? 'localhost'];
 nock.enableNetConnect((host) =>
   Boolean(unBlockedDomains.find((domain) => host.includes(domain)))
 );
