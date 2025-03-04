@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment } from 'react';
 import {
   IonFab,
   IonFabButton,
@@ -9,78 +9,19 @@ import {
   IonList,
   IonSpinner,
 } from '@ionic/react';
-import { IonInfiniteScrollCustomEvent } from '@ionic/core';
 import { chevronCollapseOutline } from 'ionicons/icons';
 
 import { useEvents } from './useEvents';
 import { EventListItem } from './EventListItem';
 import { DateView } from '../datetime/DateView';
+import { useEventsUiHelper } from './useEventsUiHelper';
 
 export const EventsList = ({ inner = false }: { inner?: boolean }) => {
-  const {
-    eventsByDate,
-    triggerFetchEvents,
-    isLoading,
-    isFetching,
-    nextPage,
-    prevPage,
-  } = useEvents(inner);
-
-  const [scrollEvent, setScrollEvent] = useState<
-    IonInfiniteScrollCustomEvent<void> | undefined
-  >();
-  const todayDateRef = useRef<HTMLIonItemElement>(null);
-  const [isTodayDateVisible, setTodayDateVisible] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  useEffect(() => {
-    if (!isFetching) {
-      scrollEvent?.target.complete();
-    }
-  }, [isFetching, scrollEvent]);
-
-  useEffect(() => {
-    triggerFetchEvents();
-  }, [triggerFetchEvents]);
-
-  // Set FAB visibility based on whether the item is in the viewport
-  useEffect(() => {
-    const currentTodayDateRef = todayDateRef?.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setTodayDateVisible(entry.isIntersecting);
-      },
-      {
-        root: document.querySelector(
-          `.scroll-container${inner ? '-inner' : ''}`
-        ),
-        threshold: 1, // Trigger if at least 100% of the item is visible
-      }
-    );
-
-    if (currentTodayDateRef) {
-      observer.observe(currentTodayDateRef);
-    }
-
-    return () => {
-      if (currentTodayDateRef) {
-        observer.unobserve(currentTodayDateRef);
-      }
-    };
-  }, [eventsByDate, inner]);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      if (!hasScrolled) {
-        todayDateRef.current?.scrollIntoView({
-          behavior: 'instant',
-          block: 'center',
-        });
-      }
-    }, 400);
-
-    return () => clearTimeout(timeoutId);
-  }, [hasScrolled]);
+  const events = useEvents(inner);
+  const { eventsByDate, triggerFetchEvents, isLoading, nextPage, prevPage } =
+    events;
+  const { isTodayDateVisible, todayDateRef, setHasScrolled, setScrollEvent } =
+    useEventsUiHelper({ events, inner });
 
   return (
     <>
