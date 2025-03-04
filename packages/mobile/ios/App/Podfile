@@ -12,7 +12,7 @@ def capacitor_pods
   pod 'Capacitor', :path => '../../../../node_modules/.pnpm/@capacitor+ios@7.0.1_@capacitor+core@7.0.1/node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../../../node_modules/.pnpm/@capacitor+ios@7.0.1_@capacitor+core@7.0.1/node_modules/@capacitor/ios'
   pod 'CapacitorApp', :path => '../../../../node_modules/.pnpm/@capacitor+app@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/app'
-  pod 'CapacitorGeolocation', :path => '../../../../node_modules/.pnpm/@capacitor+geolocation@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/geolocation'
+  pod 'CapacitorGeolocation', :path => '../../../../node_modules/.pnpm/@capacitor+geolocation@7.1.1_@capacitor+core@7.0.1/node_modules/@capacitor/geolocation'
   pod 'CapacitorNetwork', :path => '../../../../node_modules/.pnpm/@capacitor+network@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/network'
   pod 'CapacitorPreferences', :path => '../../../../node_modules/.pnpm/@capacitor+preferences@7.0.0_@capacitor+core@7.0.1/node_modules/@capacitor/preferences'
 end
